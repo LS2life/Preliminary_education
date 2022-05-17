@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">EMPLOYEE_ID</Item>
+      <Item class="java.lang.String">FIRST_NAME</Item>
+      <Item class="java.lang.String">LAST_NAME</Item>
+      <Item class="java.lang.String">EMAIL</Item>
+      <Item class="java.lang.String">PHONE_NUMBER</Item>
+      <Item class="java.lang.String">HIRE_DATE</Item>
+      <Item class="java.lang.String">JOB_ID</Item>
+      <Item class="java.lang.String">SALARY</Item>
+      <Item class="java.lang.String">COMMISSION_PCT</Item>
+      <Item class="java.lang.String">MANAGER_ID</Item>
+      <Item class="java.lang.String">DEPARTMENT_ID</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>103</Item>
+      <Item>159</Item>
+      <Item>159</Item>
+      <Item>117</Item>
+      <Item>257</Item>
+      <Item>117</Item>
+      <Item>145</Item>
+      <Item>75</Item>
+      <Item>130</Item>
+      <Item>97</Item>
+      <Item>120</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item class="java.lang.String">1 asc</Item>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23Local-HRselect * from employees</uniqueName>
+</TableSettings>

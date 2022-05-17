@@ -1,0 +1,1 @@
+alter user hr account unlock indentified by 1234;
