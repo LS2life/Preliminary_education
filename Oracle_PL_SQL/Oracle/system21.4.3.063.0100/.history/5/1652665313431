@@ -1,8 +1,0 @@
---한줄 주석
-/* 
-여러줄
-주석
-*/
---hr 유저 언락
-alter user hr identified by 1234 account unlock;
-
