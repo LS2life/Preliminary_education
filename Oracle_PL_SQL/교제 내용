@@ -1,0 +1,40 @@
+DBMS :  Data Base Managerment System
+sql	 :	Structured Query Language
+SID	:	Oracle XE 의 시스템 ID
+
+??	CLI에서 System, hr 등의 스키마 접속 방법.
+
+
+show user;		접속 유저명 출력
+exit		종료
+
+alter user HR account unlock identified by 1234;
+	비번 1234로 하는 유저 HR 을 언락
+
+select *from tab;
+	HR 사용자의 테이블과 뷰 확인
+
+스키마 = 사용자 
+	:사용자를 구성하면 자동으로 저장소 구성
+
+롤(Role, 역할) 최고역할은 DBA
+	: 일반적인 사용자는 CONNECT, RESOURCE를 부여하면
+	자신의 스키마에 대한 대부분의 작업을 수행가능
+
+char		고정형 길이
+varchar2	가변형 길이
+nchar		한글문자
+nvarchar2	한글문자
+number		숫자
+date		날짜
+
+create user sqldb identified by 1234
+	: sqldb 사용자 생성, 비밀번호 1234
+default tablespace user
+	: 기본테이블 user
+temporary tablespace temp;
+	: 임시테이블 temp;
+
+grant connect, recource, dba to sqldb;
+	: grant  = 롤 부여
+	: to sqldb 아이디에 
