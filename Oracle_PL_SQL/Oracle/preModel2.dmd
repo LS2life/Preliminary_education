@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="preModel2" id="497A3D66-95BE-3D73-06B6-E94ACA1E3450" version="3.5">
+<createdBy>User</createdBy>
+<createdTime>2022-05-19 05:57:13 UTC</createdTime>
+<ownerDesignName>preModel2</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>497A3D66-95BE-3D73-06B6-E94ACA1E3450</designId>
+</OSDM_Design>

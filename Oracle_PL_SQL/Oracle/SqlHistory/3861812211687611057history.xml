@@ -1,0 +1,11 @@
+<?xml version='1.0'  encoding='UTF-8' ?>
+<history>
+	<historyItem>
+		<sql><![CDATA[file:/C:/Users/User/eclipse-workspace/Oracle/1부-2장-3 샘플데이터설치.sql]]></sql>
+		<connection><![CDATA[MyOracleXE11g]]></connection>
+		<timestamp><![CDATA[1652235697652]]></timestamp>
+		<type><![CDATA[Script]]></type>
+		<executed><![CDATA[4]]></executed>
+		<execTime><![CDATA[0.0]]></execTime>
+	</historyItem>
+</history>
