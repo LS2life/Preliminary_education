@@ -13,10 +13,11 @@ select *from tab;
 	: 일반적인 사용자는 CONNECT, RESOURCE를 부여하면
 	자신의 스키마에 대한 대부분의 작업을 수행가능
 
-char		고정형 길이
-varchar2	가변형 길이
-nchar		한글문자
-nvarchar2	한글문자
+char		영문 고정형 byte 2배 
+varchar2	영문 가변형 byte 2배
+nchar		한글(Unicode UCS-2) 고정형 
+nvarchar2	한글(Unicode UCS-2) 가변형 
+Integer		숫자
 number		숫자
 date		날짜
 
