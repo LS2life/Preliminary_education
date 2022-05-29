@@ -1,26 +1,25 @@
-DBMS :  Data Base Managerment System
-sql	 :	Structured Query Language
-SID	:	Oracle XE 의 시스템 ID
+원론 :
+    DBMS :  Data Base Managerment System
+    sql	 :	Structured Query Language
+    SID	:	Oracle XE 의 시스템 ID
 
+    select *from tab;
+        HR 사용자의 테이블과 뷰 확인
 
-select *from tab;
-	HR 사용자의 테이블과 뷰 확인
+    스키마 = 사용자 
+        :사용자를 구성하면 자동으로 저장소 구성
 
-스키마 = 사용자 
-	:사용자를 구성하면 자동으로 저장소 구성
+    롤(Role, 역할) 최고역할은 DBA
+        : 일반적인 사용자는 CONNECT, RESOURCE를 부여하면
+        자신의 스키마에 대한 대부분의 작업을 수행가능
 
-롤(Role, 역할) 최고역할은 DBA
-	: 일반적인 사용자는 CONNECT, RESOURCE를 부여하면
-	자신의 스키마에 대한 대부분의 작업을 수행가능
-
-char		영문 고정형 byte 2배 
-varchar2	영문 가변형 byte 2배
-nchar		한글(Unicode UCS-2) 고정형 
-nvarchar2	한글(Unicode UCS-2) 가변형 
-Integer		숫자
-number		숫자
-date		날짜
-
+    char		영문 고정형 byte 2배 
+    varchar2	영문 가변형 byte 2배
+    nchar		한글(Unicode UCS-2) 고정형 
+    nvarchar2	한글(Unicode UCS-2) 가변형 
+    Integer		숫자
+    number		숫자
+    date		날짜
 
 
 !!??	CLI에서 System, hr 등의 스키마 접속 방법.
@@ -114,7 +113,7 @@ date		날짜
 		sql>	rollback;
 
 
-	테이블 데이터 조회(출력) :
+테이블 데이터 조회(출력) :
 	sql>	select 필드명 from 테이블명 where 조건식;
 		// 관계연산자 사용가능
 
@@ -154,7 +153,7 @@ date		날짜
 			중복된 값은 하나만 남기고 보여줌 :
 			sql>	select distinct addr from usertbl;
 	
-	테이블 복사 :
+테이블 복사 :
 	sql>	create table 새로운테이블 as (select 복사열 from 기존 테이블명)
 		// 제약조건이 있는 문장은 복사되나 제약조건은 복사되지 않는다.
 	
@@ -173,3 +172,6 @@ date		날짜
 
 	중간합계 :
 	sql> rollup()
+
+테이블 칼럼(열) 별칭 :
+    select 칼럼 별칭 from 테이블명;
