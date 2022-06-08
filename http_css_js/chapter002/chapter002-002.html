@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 절대 주소 
+		C:\Users\User\eclipse-workspace\ModernWebHtml5\public\chapter002\chapter002-material\Penguins.jpg
+	<img src="C:\Users\User\eclipse-workspace\ModernWebHtml5\public\chapter002\chapter002-material\Penguins.jpg" />
+	-->
+	<!-- 상대 주소
+		html 문서가 있는 위치에서 출발
+		./ - 현재 폴더-생략이 가능하기도 하지만 가급적 써주는게 좋습니다
+		../ - 상위 폴더
+		/폴더이름 - 하위 폴더
+		과제-본인 관심사 사진 5장을 선택해서 다운-zip
+		img 태그를 이용해서 사진 출력
+		1. 현재 폴더
+		2. 하위 폴더
+		3. 하위/하위 폴더
+		4. 상위 폴더
+		5. 상위/하위 폴더
+	-->
+	<img src="./chapter002-material/Penguins.jpg"/>
+	<img src="./html5.png"/>
+	<img src="../images/html5css3.png"/>
+	<img src="./chapter002-material/Penguins1.jpg" 
+	alt="오류-이미지 없음"/>
+	<img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fwww%2Fmobile%2Fedit%2F20220602_1095%2Fupload_1654164700887mqVqR.jpg%22&type=nf340_228"/>
+	<!-- alt-이지미가 없을 때 나오는 글 
+		width-가로 길이 (px)
+		height-세로 길이 (pixel)
+	-->
+	<img src="./chapter002-material/Penguins.jpg"
+	width="300" />
+	<img src="./chapter002-material/Penguins.jpg"
+	height="50" />
+	<br/>
+	<img src="http://via.placeholder.com/600x300" />
+	<!-- bgm backgroundmusic -->
+	<audio src="./chapter002-material/Kalimba.mp3"
+	controls="controls" loop="loop">
+	</audio>
+	<audio src="./chapter002-material/Kalimba.mp3"
+	controls loop>
+	</audio>
+	<video src="./chapter002-material/Wildlife.mp4"
+	controls="controls" width="500" 
+	poster="./chapter002-material/Penguins.jpg"
+	>
+	</video>
+	<video controls="controls">
+		<source src="./chapter002-material/Wildlife.mp4" type="video/mp4">
+		<source src="./chapter002-material/Wildlife.webm" type="video/webm">
+	</video>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/jaNaWklhUHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<!-- get->주소창에 데이터 보임 
+		post->주소창에 데이터가 안보임
+	-->
+	<form>
+		<input type="date" />
+		<br/>
+		<input type="text" />
+		<br/>
+		<input type="submit" />
+		<br/>
+		<input type="password" />
+		<br/>
+		<input type="file" />
+		<br/>
+		<input type="text" name="str1"/>
+		<br/>
+		<input type="button"/>
+		<button>play</button>
+		<input type="reset"/>
+		<input type="radio"/>
+		<input type="radio"/>
+		<input type="radio"/>
+		<br/>
+		<label>아이디</label>
+		<h1>3번 입력 오류시</h1>
+		<br/>
+		<input type="text" />
+		<br/>
+		<label>비밀번호</label>
+		<p>비밀번호 8자리 이상</p>
+		<br/>
+		<input type="password" />
+		<br/>
+		<input type="email" />
+		<br/>
+		<input type="range"/>
+		<!-- 
+			radio - 선택지 중에 한개만 선택 해야 될 때
+			checkbox - 다중 선택 가능  
+		 -->
+		 <br/>
+		 <input type="radio" 
+		 name="gender" value="man" 
+		 />남성
+		 <input type="radio" 
+		 name="gender" value="woman"
+		 checked="checked"/>여성
+		 <br/>
+		 <input type="checkbox">축구
+		 <input type="checkbox">농구
+		 <input type="checkbox">야구
+		 <br/>
+		 <textarea rows="10" cols="30">내용을 입력하세요.</textarea>
+		<br/>
+		<select multiple="multiple">
+			<option>김밥</option>
+			<option>떡볶이</option>
+			<option>순대</option>
+			<option>오뎅</option>
+		</select>
+		<br/>
+		<select>
+			<optgroup label="HTML5">
+				<option>Multimedia</option>
+				<option>Connectivity</option>
+				<option>Device Access</option>
+			</optgroup>
+			<optgroup label="CSS3">
+				<option>Animation</option>
+				<option>3D Transform</option>
+			</optgroup>
+		</select>
+	</form>
+	<form>
+		<fieldset>
+			<legend>로그인</legend>
+			<table>
+				<tr>
+					<td>이름</td>
+					<td><input type="text"/></td>
+				</tr>
+				<tr>
+					<td>이메일</td>
+					<td><input type="email"/></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
+
+
+
+
