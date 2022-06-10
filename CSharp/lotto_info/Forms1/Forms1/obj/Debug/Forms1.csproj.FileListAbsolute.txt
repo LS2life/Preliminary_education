@@ -1,0 +1,11 @@
+C:\Users\User\Visual_Studio\Forms1\Forms1\bin\Debug\Forms1.exe.config
+C:\Users\User\Visual_Studio\Forms1\Forms1\bin\Debug\Forms1.exe
+C:\Users\User\Visual_Studio\Forms1\Forms1\bin\Debug\Forms1.pdb
+C:\Users\User\Visual_Studio\Forms1\Forms1\obj\Debug\Forms1.csproj.AssemblyReference.cache
+C:\Users\User\Visual_Studio\Forms1\Forms1\obj\Debug\Forms1.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Visual_Studio\Forms1\Forms1\obj\Debug\Forms1.Properties.Resources.resources
+C:\Users\User\Visual_Studio\Forms1\Forms1\obj\Debug\Forms1.csproj.GenerateResource.cache
+C:\Users\User\Visual_Studio\Forms1\Forms1\obj\Debug\Forms1.csproj.CoreCompileInputs.cache
+C:\Users\User\Visual_Studio\Forms1\Forms1\obj\Debug\Forms1.exe
+C:\Users\User\Visual_Studio\Forms1\Forms1\obj\Debug\Forms1.pdb
+C:\Users\User\Visual_Studio\Forms1\Forms1\obj\Debug\Forms1.Form1.resources
