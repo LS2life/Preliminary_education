@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		p::first-letter{
+			font-size: 3em;
+		}
+		p::first-line{
+			color:red;
+		}
+		p{
+			counter-increment:rint;
+		}
+		p::before{
+			content:counter(rint) ".";
+		}
+		p::after{
+			content:"-" attr(data-page) " page";
+		}
+		::selection{
+			background-color: gray;
+		}
+	</style>
+</head>
+<body>
+	<h1>Why do we use it?</h1>
+	<p data-page="52">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+	<p data-page="273">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+</body>
+</html>
