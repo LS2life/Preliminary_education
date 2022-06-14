@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		div{
+			margin:10px;padding:10px;
+			width:100px;height:100px;
+			border:10px solid balck;
+		}
+		div:first-child{
+			background-color: red;
+			box-sizing: content-box;
+		}
+		div:last-child{
+			background-color: orange;
+			/* width, height 고정
+			   margin 크기만 적용
+			   박스 너비=width+2*margin
+			   박스 높이=height2*margin
+			 */
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+</body>
+</html>
