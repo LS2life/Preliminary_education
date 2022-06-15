@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		ul,li{
+		  margin: 0;
+		  padding: 0;
+		  list-style: none;
+		}
+		a{
+		  text-decoration: none;
+		  color: inherit;
+		  display: inline-block;
+		}
+		
+		ul{
+		  display:flex;
+		  flex-flow: row nowrap;
+		  padding: 10px;
+		}
+		
+		div>ul>li::after{
+		  content: "|";
+		  float: right;
+		  display: block;
+		}
+		
+		div>ul>li:last-child::after{
+		  content: "";
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+	  <ul>
+	    <li><a href="#" class="">고객센터</a></li>
+	    <li><a href="#" class="">회원가입</a></li>
+	    <li><a href="#" class="">로그인</a></li>    
+	  </ul>
+	</div>
+</body>
+</html>
