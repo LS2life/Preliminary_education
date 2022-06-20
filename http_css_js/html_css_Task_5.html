@@ -4,7 +4,7 @@
     <title>Earth-1218</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coiny"
             type = "text/css" />
-    <!-- 초기?�� -->
+    <!-- 초기화 -->
     <style>
         * { margin: 0; padding: 0;}
         body {font-family: sans-serif;}
@@ -12,14 +12,14 @@
         a { text-decoration: none; }
         img { border: 0; }
     </style>
-    <!-- ?��?�� -->
+    <!-- ?헤더 -->
     <style>
-        /* 중앙 ?��?�� */
+        /* 중앙 정렬 */
         #main_header{
             width: 960px;
             margin: 0 auto;
 
-        /* ?��??? 좌표 */
+        /* 절대 좌표 */
             height: 160px;
             position: relative;
         }
@@ -40,7 +40,7 @@
         }
     </style>
 
-    <!-- ????��??? -->
+    <!-- 타이틀 -->
     <style>
         #title {
             font-family: 'Coiny', cursive;
@@ -79,13 +79,13 @@
         #main_lnb > ul > li:last-child > a { border-radius: 0 10px 10px 0; }
     </style>
 
-    <!-- 콘텐�? -->
+    <!-- 콘텐츠 -->
     <style>
         #content {
-            /*  중앙?��?�� */
+            /*  중앙 정렬 */
             width: 960px; margin: 0 auto;
 
-            /* ?��?�� ?��?��?��?�� 구성 */
+            /* 수평 레이아웃 구성 */
             overflow: hidden;
         }
 
@@ -106,32 +106,32 @@
             border: 1px solid black;
         }
     </style>
-    <!-- ?��?��?�� -->
+    <!-- 사이드 -->
     <style>
-		/* 첫번 �? ?�� */
+		/* 첫번 째 탭 */
 		input:nth-of-type(1) {display: none; }
 		input:nth-of-type(1) ~ div:nth-of-type(1) { display: none; }
 		input:nth-of-type(1):checked  ~ div:nth-of-type(1) {display: block; }
-		/*  ?���? �? ?�� */
+		/*  두번 째 탭 */
 		input:nth-of-type(2) {display: none; }
 		input:nth-of-type(2) ~ div:nth-of-type(2) { display: none; }
 		input:nth-of-type(2):checked  ~ div:nth-of-type(2) {display: block; }
-		/*  ?�� 모양 구성 */
+		/*  탭 모양 구성 */
 		section.buttons { }
 		section.buttons > label {
-			/* ?��?�� ?��?�� */
+			/* 수평 정렬 */
 			display: block; float: left;
 
-			/* ?���? �? �??�� ?���? �??�� */
+			/* 크기 및 글자 위치 지정 */
 			width: 100px; height: 30px;
 			line-height: 30px;
 			text-align: center;
 
-			/* ?��?���? �??�� */
+			/* 테두리 지정 */
 			box-sizing: border-box;
 			border: 1px solid black;
 
-			/* ?��?�� �??�� */
+			/* 색상 지정 */
 			background: white;
 			color: black;
 
@@ -168,11 +168,25 @@
 			text-overflow: ellipsis;
 		}
 	</style>
-    <!-- ?��?�� -->
-    <style></style>
+    <!-- 푸터 -->
+    <style>
+        #main_fooer {
+            /* 중앙 정렬*/
+            width: 960px; margin: 0 auto;
+            margin-bottom: 10px;
+
+            /* 테두리 */
+            box-sizing:  border-box;
+            padding: 10px;
+            border: 1px solid black;
+
+            /* 글자 정렬 */
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <header id = "main_header">
+    <div id = "main_header">
         <div id ="title">
             <h1>Rint Developent</h1>
             <h2>HTML5 + CSS Basic</h2>
@@ -199,15 +213,15 @@
     <div id="content">
         <section id = "main_section">
 			<article class = "main_article">
-				<h1>Main Section</h1>
+				<h1>Main Article</Article></h1>
 				<p>lorem ipsum dolor si amet, coonsectetur adippiscing elit.</p>
 			</article>
 			<article class = "main_article">
-				<h1>Main Section</h1>
+				<h1>Main Article</h1>
 				<p>lorem ipsum dolor si amet, coonsectetur adippiscing elit.</p>
 			</article>
 			<article class = "main_article">
-				<h1>Main Section</h1>
+				<h1>Main Article</h1>
 				<p>lorem ipsum dolor si amet, coonsectetur adippiscing elit.</p>
 			</article>
         </section>
