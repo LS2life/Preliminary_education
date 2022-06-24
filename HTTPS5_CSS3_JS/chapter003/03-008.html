@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+	/* 동일선택자
+		+ - 바로 밑에 한개만 선택
+		~ - 뒤에 위치한 모든 요소를 선택
+	 */
+		h1 + h2{
+			color:red;
+		}
+		h1 ~ h2{
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	<h1>Header - 1</h1>
+	<h2 id="first-h2" class="h2-after-h1">Header - 2</h2>
+	<h2>Header - 2</h2>
+	<h2>Header - 2</h2>
+	<h2>Header - 2</h2>
+	<div>
+		<h1>자손,후손</h1>
+	</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+label을 하나 만든 다음에(디자인창에서)
+버튼도 만들고
+그 버튼 누르면 label 숫자가
+계속 랜덤하게 바뀌게 하기
+그리고
+버튼명 : button_random
+라벨명 : label_myrandom

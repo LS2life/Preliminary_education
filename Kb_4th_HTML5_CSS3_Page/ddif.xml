@@ -1,0 +1,15 @@
+<?xml version = '2.0' encoding = 'UTF-8'?>
+<!DOCTYPE configration PUBLIC>
+<configration >
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+<apiDataList>
+<apiData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="lostInfoVO">
+<regName/>
+<regCategory>기타</regCategory>
+<regTitle>지갑, 현금, 신분증</regTitle>
+<regPickingPlace>#1077</regPickingPlace>
+<regKeepingplace/>
+<regPickingDate>2022-06-15</regPickingDate>
+</apiData>
