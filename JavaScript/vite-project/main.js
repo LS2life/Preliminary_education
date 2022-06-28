@@ -37,3 +37,4 @@ any=1
 any="문자"
 console.log("type of any" + typeof(any))
 
+let data1=1.23+123+""
