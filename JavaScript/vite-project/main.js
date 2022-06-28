@@ -27,7 +27,7 @@ console.log(c1==c2)
 console.log(c1===c2)
 console.loa(!true)
 let b1=true
-let b2=felse
+let b2=false
 console.log( b1?"b1 is true":"b1 is false")
 console.log( b1 && b2?"true":"false")
 console.log( b1 || b2?"true":"false")
