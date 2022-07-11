@@ -115,3 +115,7 @@ Boundary Balue Analysis 경계값 분석 >
     .sibling        형제    같은 부모
     .size           크기    자신포함 모든 자손노드의 개수
 
+TCP/IP > IPS ?
+    TCP     Transmission Control Protocol
+    IP      Internet Protocol
+    IPS     Internet Protocol Suite
