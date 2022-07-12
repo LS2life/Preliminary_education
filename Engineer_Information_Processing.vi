@@ -1,7 +1,5 @@
 UML >?
 	Unified Modeling Language
-    : 전체(Whole)와 부분(Part)의 관계 명시 통합 모델링 언어
-		.일반화관계 Generalization  IS-A
         .연관관계   Association     HAS-A
         .의존관계   Dependency      USE
         .집약관계   Aggregation
