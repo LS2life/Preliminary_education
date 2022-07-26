@@ -1,7 +1,6 @@
 package com.example.daoexam.main;
 
 import java.sql.Connection;
-import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
@@ -9,30 +8,28 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.example.daoexam.config.ApplicationConfig;
-
+//import시 선택 java.sql
 public class DataSourceTest {
-	
+
 	public static void main(String[] args) {
-		ApplicationContext ac
-			=new AnnotationConfigApplicationContext(
-				ApplicationConfig.class);
-		DataSource ds=ac.getBean(DataSource.class);
-		Connection conn=null;
+		ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+		DataSource ds = ac.getBean(DataSource.class);
+		Connection conn = null;
 		try {
-			conn=ds.getConnection();
-			if(conn!=null) {
-				System.out.println("접속성공^^");
-			}
-		} catch (SQLException e) {
+			conn = ds.getConnection();
+			if(conn != null)
+				System.out.println("접속 성공^^");
+		}catch (Exception e) {
 			e.printStackTrace();
 		}finally {
-			if(conn!=null) {
+			if(conn != null) {
 				try {
 					conn.close();
-				} catch (SQLException e) {
+				}catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		}
 	}
+
 }
