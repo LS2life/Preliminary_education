@@ -9,16 +9,16 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>JSPBoot</artifactId>
+	<artifactId>prectice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>JSPBoot</name>
+	<name>prectice</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
 	
 	<dependencies>
-		<dependency>
+			<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
@@ -44,7 +44,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	    <!-- jsp start-->
+	 <!-- jsp start-->
 		<dependency>
 		    <groupId>jstl</groupId>
 		    <artifactId>jstl</artifactId>
@@ -55,7 +55,7 @@
 		    <artifactId>tomcat-embed-jasper</artifactId> 
 		    <scope>provided</scope> 
 		</dependency>		
-		<!-- jsp end-->
+		<!-- jsp end-->	
 	</dependencies>
 
 	<build>
