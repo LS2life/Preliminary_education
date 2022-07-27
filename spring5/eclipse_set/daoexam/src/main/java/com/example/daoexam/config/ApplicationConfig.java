@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Import;
 
 //ctrl+shift+o-자동 임포트
 @Configuration
-@Import({DBConfig.class})
+@Import({com.example.daoexam.config.DBConfig.class})
 @ComponentScan(basePackages = {"com.example.daoexam001.dao"})
 public class ApplicationConfig {
 
