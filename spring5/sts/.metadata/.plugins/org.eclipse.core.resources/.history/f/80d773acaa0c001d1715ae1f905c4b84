@@ -1,0 +1,13 @@
+package com.example.demo.service;
+
+import java.util.List;
+
+import com.example.demo.dto.Guestbook;
+
+public interface GuestBookService {
+	
+	public static final Integer LIMIT=5;
+	public List<Guestbook> getGuestbooks(Integer start);
+	public void deleteGuestbook(Long id,String ip);
+
+}

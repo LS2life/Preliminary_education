@@ -1,0 +1,39 @@
+package com.example.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.dao.GuestbookDao;
+import com.example.demo.dao.LogDao;
+import com.example.demo.dto.Guestbook;
+
+public class GuestbookServiceImpl implements GuestbookService {
+	
+	@Autowired
+	GuestbookDao guestbookDao;
+	
+	@Autowired
+	LogDao logDao;
+
+	@Override
+	public List<Guestbook> getGuestbooks(Integer start) {
+		return null;
+	}
+
+	@Override
+	public void deleteGuestbook(Integer id, String ip) {
+
+	}
+
+	@Override
+	public Guestbook addGuestbook(Guestbook guestbook, String ip) {
+		return null;
+	}
+
+	@Override
+	public int getGuestbooksSize() {
+		return 0;
+	}
+
+}

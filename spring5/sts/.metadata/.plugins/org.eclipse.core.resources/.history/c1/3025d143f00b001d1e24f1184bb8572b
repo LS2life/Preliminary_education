@@ -1,0 +1,15 @@
+package com.example.demo.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.repository.GuestbookRepository;
+
+public class GuestbookDao {
+	@Autowired
+	private GuestbookRepository guestbookRepository;
+	
+	public void getGuestbooks() {
+		System.out.println(guestbookRepository.findAll());
+	}
+
+}

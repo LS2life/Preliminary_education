@@ -1,0 +1,29 @@
+package com.example.demo.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.example.demo.dto.Guestbook;
+import com.example.demo.repository.GuestbookRepository;
+
+@Repository
+public class GuestbookDao {
+	@Autowired
+	private GuestbookRepository guestbookRepository;
+	
+	public List<Guestbook> getGuestbooks() {
+		List<Guestbook> guestbooks=new ArrayList();
+		guestbookRepository.findAll()
+			.forEach(o->guestbooks.add(o));
+//		guestbooks.forEach(o->System.out.println(o));
+		return guestbooks;
+	}
+	
+	public Long getGuestbooksSize() {
+		return guestbookRepository.count();
+	}
+
+}

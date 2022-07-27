@@ -1,0 +1,26 @@
+package com.example.demo;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.demo.dao.GuestbookDao;
+import com.example.demo.dto.Guestbook;
+
+@SpringBootTest
+class GuestbookDaoTests {
+	@Autowired
+	GuestbookDao guestbookDao;
+	
+	@Test
+	void testGuestbookDao() {
+//		List<Guestbook> guestbooks=guestbookDao.getGuestbooks();
+//		Long getCount=Long.valueOf(guestbooks.size());
+//		assertThat(getCount).isEqualTo(guestbookDao.getGuestbooksSize());
+	}
+
+}
