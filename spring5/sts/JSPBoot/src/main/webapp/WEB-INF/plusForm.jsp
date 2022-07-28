@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>My first JSP</title>
 </head>
 <body>
 	<a href="/">Home</a>
