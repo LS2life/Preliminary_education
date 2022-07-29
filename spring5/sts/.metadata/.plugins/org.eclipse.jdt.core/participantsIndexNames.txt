@@ -9,7 +9,7 @@ C:\Users\User\Documents\workspace-spring-tool-suite-4-4.15.1.RELEASE\.metadata\.
 \bootjsptest\src\main\java
 C:\Users\User\Documents\workspace-spring-tool-suite-4-4.15.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\64171348.index
 \JSPBoot\src\main\java
-C:\Inrhdwlsmd\220404_ABCD\spring5\sts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\64171348.index
-\JSPBoot\src\main\java
+C:\Users\User\Documents\workspace-spring-tool-suite-4-4.15.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2891383451.index
+\GuestBookJsp\src\main\java
 C:\Users\User\Documents\workspace-spring-tool-suite-4-4.15.1.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3671238643.index
 \GuestBookJspTest\src\main\java

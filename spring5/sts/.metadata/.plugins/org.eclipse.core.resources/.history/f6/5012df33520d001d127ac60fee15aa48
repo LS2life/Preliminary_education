@@ -1,0 +1,11 @@
+package com.example.demo.dto;
+
+public class User {
+	
+	private String name;
+	private String email;
+	private int age;
+	
+	//게더 세더 toString
+
+}

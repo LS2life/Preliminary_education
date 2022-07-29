@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>방명록 목록</title>
+</head>
+<body>
+	<h1>방명록</h1>
+	${list }
+	<a href="list?page=0">1</a>
+	<a href="list?page=1">2</a>
+	<a href="list?page=2">3</a>
+</body>
+</html>

@@ -13,7 +13,7 @@ public class LogDao {
 	private LogRepository logRepository;
 	
 	public void putLog(Log log) {
-		logRepository.save(log);
+		logRepository.saveAndFlush(log);
 	}
 
 }

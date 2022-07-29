@@ -1,10 +1,10 @@
 package com.example.demo.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.demo.dto.Log;
 
 public interface LogRepository 
-	extends CrudRepository<Log, Integer> {
+	extends JpaRepository<Log, Long> {
 
 }

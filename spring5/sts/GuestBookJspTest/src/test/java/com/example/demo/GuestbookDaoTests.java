@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.Date;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -30,6 +31,12 @@ class GuestbookDaoTests {
 //		Long getCount=Long.valueOf(guestbooks.size());
 //		assertThat(getCount).isEqualTo(guestbookDao.getGuestbooksSize());
 		
+//		Guestbook guestbook=new Guestbook();
+//		guestbook.setName("testName");
+//		guestbook.setRegdate(new Date());
+//		guestbook.setContent("testContent");
+//		guestbookDao.putGuestbook(guestbook);
+		
 //		for(int i=0;i<10;i++) {
 //			Guestbook guestbook=new Guestbook();
 //			guestbook.setName("testName"+i);
@@ -38,7 +45,7 @@ class GuestbookDaoTests {
 //			guestbookDao.putGuestbook(guestbook);
 //		}
 		
-//		guestbookDao.deleteGuestBook(10);
+//		guestbookDao.deleteGuestBook(15L);
 //		Long gSize=guestbookDao.getGuestbooksSize();
 //		System.out.println(gSize);
 	}
