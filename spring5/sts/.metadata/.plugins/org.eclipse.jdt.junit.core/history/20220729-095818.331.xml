@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="GST" project="GuestBookJsp" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="com.example.demo.GST" time="0.291" displayname="GST" uniqueid="[engine:junit-jupiter]/[class:com.example.demo.GST]">
-    <testcase name="testGetList" classname="com.example.demo.GST" time="0.288" displayname="testGetList()" uniqueid="[engine:junit-jupiter]/[class:com.example.demo.GST]/[method:testGetList()]"/>
-    <testcase name="testDelete" classname="com.example.demo.GST" time="0.002" displayname="testDelete()" uniqueid="[engine:junit-jupiter]/[class:com.example.demo.GST]/[method:testDelete()]"/>
-  </testsuite>
-</testrun>

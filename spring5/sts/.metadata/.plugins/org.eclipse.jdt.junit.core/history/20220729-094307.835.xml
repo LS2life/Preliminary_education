@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="GBT" project="GuestBookJsp" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.example.demo.GBT" time="0.001" displayname="GBT" uniqueid="[engine:junit-jupiter]/[class:com.example.demo.GBT]">
-    <testcase name="testGBD" classname="com.example.demo.GBT" time="0.001" displayname="testGBD()" uniqueid="[engine:junit-jupiter]/[class:com.example.demo.GBT]/[method:testGBD()]"/>
-  </testsuite>
-</testrun>

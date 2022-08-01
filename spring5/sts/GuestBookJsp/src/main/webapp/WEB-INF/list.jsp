@@ -22,5 +22,15 @@
 	<c:forEach items="${pageList}" var="page">
 		<a href="list?page=${page }">${page+1 }</a>
 	</c:forEach>
+	<br/>
+	<br/>
+	<form method="post" action="write">
+		name : <input type="text" name="name">
+		<br/>
+		<textarea name="content" rows="6" cols="60">
+		</textarea>
+		<br/>	
+		<input type="submit" value="등록">
+	</form>
 </body>
 </html>
