@@ -3,6 +3,8 @@ import {flip} from "svelte/animate"
 import { crossfade, fade, fly } from "svelte/transition";
 import { onMount } from "svelte";
 
+ // const 초기값을 변경할 수 없는 변수, const 상수
+// 
 const [send, receive]=crossfade({
 	duration:500,
 	fallback:fade
