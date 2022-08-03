@@ -71,10 +71,12 @@ async function remove(todo){
 	todos=todos.filter(t=>t!==todo)
 }
 </script>
+
+
 <div class="board">
 	<h1 transition:fade>Todos App</h1>
 	<input
-		class="new-doto"
+		class="new-todo"
 		placeholder="What needs to be done?"
 		on:keydown="{add}"
 		transition:fade

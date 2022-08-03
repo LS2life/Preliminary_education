@@ -8,8 +8,7 @@ public interface GuestbookService {
 	public static final Integer LIMIT=5;
 	public List<Guestbook> getGuestbooks(Integer page);
 	public void deleteGuestbook(Long id,String ip);
-	public Guestbook putGuestbook(
-			Guestbook guestbook,String ip);
+	public Guestbook putGuestbook(Guestbook guestbook,String ip);
 	public int getGuestbookSize();
 	
 }

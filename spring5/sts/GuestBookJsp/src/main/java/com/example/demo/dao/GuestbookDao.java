@@ -25,8 +25,7 @@ public class GuestbookDao {
 		return guestbookRepostory.findAll();
 	}
 	
-	public List<Guestbook> getGuestbooksSome(
-			Integer page,Integer limit){
+	public List<Guestbook> getGuestbooksSome( Integer page,Integer limit) {
 		Pageable pageable=PageRequest.of(
 				page, limit,Sort.by("id").descending());
 		return guestbookRepostory.findAll(pageable).getContent();
