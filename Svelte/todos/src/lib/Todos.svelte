@@ -43,31 +43,20 @@ async function add(event){
 	// console.log(event.key)
 	if(event.key!=="Enter") return
 
-	const todo={
 		// id:uid++,
-		done:false,
-		description:event.target.value
-	}
+	const todo={ done:false, description:event.target.value }
 
-	await fetch(endpoint,{
-		method:"POST",
-		headers:{
+	await fetch(endpoint,{ method:"POST", headers:{
 			"Content-Type":"application/json"
-		},
-		body:JSON.stringify({
-			done:todo.done,
-			description:todo.description
-		})
-
+		}, body:JSON.stringify({ done:todo.done, description:todo.description })
 	})
 
 	todos=[todo,...todos]
 	event.target.value=""
 }
 
-async function remove(todo){
-	await fetch(endpoint+"/"+todo.id,{
-		method:"DELETE"})
+async function remove(todo){ 
+	await fetch(endpoint+"/"+todo.id,{ method:"DELETE"})
 	todos=todos.filter(t=>t!==todo)
 }
 </script>

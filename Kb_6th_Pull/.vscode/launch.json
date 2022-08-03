@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PlaygroundApplication<playground>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.esanfield.playground.PlaygroundApplication",
+            "projectName": "playground",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
