@@ -7,6 +7,12 @@
 - alt + shift +
  -->
 
+# Localhost Front(Svelte)+back(Spring)
+
+- database is mysql
+- software project management is maven
+- runtime node.js
+
 ## vim
 
 - Marking

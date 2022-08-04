@@ -9236,3 +9236,25 @@ org.eclipse.core.runtime.CoreException: LogTest 실행 구성이 처리 완료된 프로젝트
 2022-08-03 15:25:34,484 [Worker-5: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-08-03 15:25:34,484 [Worker-5: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Inrhdwlsmd\220404_ABCD\spring5\sts\Todos\src\test\resources
 2022-08-03 16:34:31,169 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-08-04 08:24:18,911 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-08-04 08:25:18,544 [Worker-6: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2022-08-04 08:25:19,456 [Worker-6: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.esanfield:playground:0.0.1-SNAPSHOT @ C:\Inrhdwlsmd\220404_ABCD\Kb_6th_Pull\playground\pom.xml.
+2022-08-04 08:25:20,935 [Worker-6: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /playground/src/main/java
+2022-08-04 08:25:20,935 [Worker-6: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /playground/src/main/resources
+2022-08-04 08:25:20,944 [Worker-6: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /playground/src/main/resources
+2022-08-04 08:25:20,954 [Worker-6: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /playground/src/test/java
+2022-08-04 08:25:22,764 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-04 08:25:22,765 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-08-04 08:25:22,770 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-08-04 08:25:22,789 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-04 08:25:22,795 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-04 08:25:22,795 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-08-04 08:25:22,795 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Inrhdwlsmd\220404_ABCD\spring5\sts\Todos\src\test\resources
+2022-08-04 08:25:22,988 [Worker-6: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 4 sec
+2022-08-04 08:25:23,750 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-04 08:25:23,750 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-08-04 08:25:23,751 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-08-04 08:25:23,754 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-04 08:25:23,757 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-04 08:25:23,757 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-08-04 08:25:23,758 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Inrhdwlsmd\220404_ABCD\Kb_6th_Pull\playground\src\test\resources
