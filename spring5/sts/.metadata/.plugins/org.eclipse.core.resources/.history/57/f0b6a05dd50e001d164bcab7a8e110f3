@@ -1,5 +1,0 @@
-package com.example.demo.service;
-
-public interface GuestbookService {
-	public static final Integer LIMIT=5;
-}
