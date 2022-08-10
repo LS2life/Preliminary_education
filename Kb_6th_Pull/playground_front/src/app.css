@@ -25,16 +25,16 @@ a:hover {
 }
 
 header {
-  border: solid white;
-  position: absolute;
-  top: 0;
-  left: 0;
+  border: 1px solid white;
+
+  position: relative;
+  top: 2px;
   height: 150px;
   width: 100%;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3.1em;
 }
 
 h1,
@@ -43,26 +43,26 @@ h2 {
 }
 
 nav {
-  width: 100%;
-  top: 0;
-  right: 0;
-  height: 50px;
-  border: solid blue;
+  border: 1px solid blue;
+
+  width: 100vw;
+  top: 0px;
+  left: 0;
   position: fixed;
+  text-align: center;
   font-size: 1.5em;
-  margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 section {
-  padding-bottom: 100px;
+  border-left: 1px solid yellow;
+  border-right: 1px solid yellow;
 }
 
 body {
-  border: solid yellow;
-  margin: 0;
-  display: flex;
-  place-items: normal start;
+  border: 1px solid red;
+  top: 0;
+  left: 0;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -71,10 +71,11 @@ footer {
   text-align: left;
   border-top: 1px solid grey;
   padding-top: 20px;
-  position: absolute;
+  position: relative;
   bottom: 0;
-  left: 5%;
-  width: 90%;
+  left: 2%;
+  width: 96%;
+  max-height: 10%;
 }
 
 .card {

@@ -1,9 +1,5 @@
 <script>
-    import Header from "./test/menuParts/mainHeader.svelte"
-    import Footer from "./test/menuParts/mainFooter.svelte"
-    import Navigation from "./test/menuParts/Navigation.svelte";
+    import Page_Grid from "./test/pageFormParts/Page_Grid.svelte";
 </script>
 
-<Header/>
-<Navigation />
-<Footer />
+<Page_Grid />
