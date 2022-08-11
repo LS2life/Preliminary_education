@@ -42,18 +42,6 @@ h2 {
   line-height: 0.75;
 }
 
-nav {
-  border: 1px solid blue;
-
-  width: 100vw;
-  top: 0px;
-  left: 0;
-  position: fixed;
-  text-align: center;
-  font-size: 1.5em;
-  padding: 10px;
-}
-
 section {
   border-left: 1px solid yellow;
   border-right: 1px solid yellow;
@@ -61,6 +49,10 @@ section {
 
 body {
   border: 1px solid red;
+
+  background-color: #333;
+  color: whitesmoke;
+  transition: all 1s;
   top: 0;
   left: 0;
   min-width: 320px;

@@ -1,4 +1,5 @@
 <script>
+    import { slide } from "svelte/transition";
     import { Router, Link, Route } from "svelte-routing";
     import Java from "../routes/Language_Java.svelte";
     import JavaScript from "../routes/Language_JavaScript.svelte"
@@ -11,9 +12,40 @@
     import Home from "./Page_Grid.svelte"
 
     export let url = "";
+    let visible = true;
 </script>
 
+<label>
+    <input type="checkbox" bind:checked={visible}>
+    visible
+</label>
+
+{#if visible}
 <Router {url}>
+<div>
+    <Route path="java" component={Java}/>
+    <Route path="javaScript" component={JavaScript}/>
+    <Route path="python" component={Python}/>
+    <Route path="ubuntu" component={Ubuntu}/>
+    <Route path="markdown" component={Markdown}/>
+    <Route path="html5" component={Html5}/>
+    <Route path="css3" component={CSS3}/>
+    <Route path="about" component={About}/>
+</div>
+<ul transition:slide>
+    <li> <Link to="java">Java</Link> </li>
+    <li> <Link to="javaScript">JavaScript</Link> </li>
+    <li> <Link to="python">Pytnon</Link> </li>
+    <li> <Link to="ubuntu">Ubuntu</Link> </li>
+    <li> <Link to="markdown">Markdown</Link> </li>
+    <li> <Link to="html5">Html5</Link> </li>
+    <li> <Link to="css3">CSS3</Link> </li>
+    <li> <Link to="about">About</Link> </li>
+</ul>
+</Router>
+
+{/if}
+<!-- <Router {url}>
     <div>
         <Route path="java" component={Java}/>
         <Route path="javaScript" component={JavaScript}/>
@@ -45,4 +77,4 @@
             </div>
         </div>
     </nav>
-</Router>
+</Router> -->

@@ -1,7 +1,6 @@
 > # Spring5
 
-<hr />
-
+<br>
 
 - ## 간단한 약어 정리
     - DTO (Data Transfer Object)
@@ -12,7 +11,5 @@
 - ioc컨테이너 - 인스턴스
 - Car, Engine
 - DI - 의존성 주입 - 자동
-
-
-
 <br>
+

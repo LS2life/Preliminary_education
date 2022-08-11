@@ -21,22 +21,22 @@ import Store from './lib/store/Store.svelte'
 import Transitions from './lib/transitions/Transitions.svelte'
 </script>
 
-  <!-- 
-  <Introduction/>
-  <Reactivity/>
-  <Props/>
-  <Logic/>
-  <Events/>
-  <Bindings/>
-  <TodoApp/>
-  <MediaElements/>
-  <LifeCycle/>
-  <OnDestroy/>
-  <BaUpdate2/>
-  <BaUpdate/>
-  <Tick/>
-  <Store/>
-  <Transitions/>
-  <Todos/>
--->
+
+<Introduction/>
+<Reactivity/>
+<Props/>
+<Logic/>
+<Events/>
+<Bindings/>
+<TodoApp/>
+<MediaElements/>
+<!-- <LifeCycle/> -->
+<OnDestroy/>
+<BaUpdate2/>
+<BaUpdate/>
+<Tick/>
+<Store/>
+<Transitions/>
+<Todos/>
+<Todos1 />
 <Todos2/>

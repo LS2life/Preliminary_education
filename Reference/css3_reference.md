@@ -105,9 +105,9 @@ div { position: static; }   정적 위치
       overflow-y    내용(content)의 크기가 로 box를 넘어갈때 처리방법 결정.
 
 
-div { display: inline; }
-                block;
-                inline-block;
+div { display: inline; }      span, a, em 등 줄바꿈없이 나란히 배치. width, height  속성 무시
+                block;        div, p, h1 등 엘리먼트 하나당 1줄 차지.
+                inline-block;   
                 none;           요소를 나타내지 않음.
                 flex;       grid때문에 잘 안씀.
                 grid;
