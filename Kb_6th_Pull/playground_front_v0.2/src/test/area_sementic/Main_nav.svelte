@@ -1,6 +1,5 @@
 <script>
-    import MenuSlide from './Menu_slide.svelte';
-    import { fly } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
     import { Router, Link, Route } from "svelte-routing";
     import Java from "../routes/Language_Java.svelte"
     import JavaScript from "../routes/Language_JavaScript.svelte"
@@ -10,7 +9,6 @@
     import Html5 from "../routes/Markup_Html.svelte"
     import CSS3 from "../routes/Stylesheet_css.svelte"
     import About from "../routes/About.svelte";
-import { xlink_attr } from 'svelte/internal';
 
 // pass는 pipe 없음
     let AutoAdd = [
@@ -27,63 +25,39 @@ import { xlink_attr } from 'svelte/internal';
     let visible= true;
 </script>
 
-<h1>이게 될까?</h1>
-
-<div id="butten_slide_main">
-    <div>
-        <label >
-            <input type="checkbox" bind:checked={visible}>
-            visible
-        </label>
-    </div>
-
 <!-- <button on:click={}></button> -->
+
+<div id="main_nav">
     <Router {url}>
         {#if visible}
-        <div id="slide_menu" transition:fly="{{x: 90}}">
+        <nav id="slide_menu" transition:slide>
             {#each AutoAdd as {id, name}, i}
-                <Link  to="{id}">{name}</Link><br>
+                <Link  to="{id}">{name}</Link>
             {/each}
-        </div>
-    {/if}
+        </nav>
+        {/if}
+        <label >
+            visible
+            <input type="checkbox" bind:checked={visible}>
+        </label>
     </Router>
 </div>
-    <Router {url}>
-    <div>
-        <Route path="java" component={Java}/>
-        <Route path="javaScript" component={JavaScript}/>
-        <Route path="python" component={Python}/>
-        <Route path="ubuntu" component={Ubuntu}/>
-        <Route path="markdown" component={Markdown}/>
-        <Route path="html5" component={Html5}/>
-        <Route path="css3" component={CSS3}/>
-        <Route path="about" component={About}/>
-    </div>
-    </Router>
-
 
 <style>
-#butten_slide_main {
-    border: 1px solid blue;
+    label {
+        border: 1px solid lawngreen;
+    }
+    #main_nav {
+        border: 1px solid lawngreen;
 
-    top: 0;
-    right: 0;
-    width: 20vw;
-    padding: 10px;
+        display: inline-flex;
+        position: sticky;
+        top: 0;
+        left: 0;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        font-size: 1.5em;
 
-}
-
-#slide_menu {
-    border: 1px solid blue;
-
-    position: absolute;
-    height: 100vh;
-    width: 70vw;
-    max-width: 300px;
-    top: 10px;
-    right: 0;
-    text-align: left;
-    font-size: 1.22em;
-    padding: 10px;
-}
+    }
 </style>

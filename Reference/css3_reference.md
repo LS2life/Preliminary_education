@@ -88,9 +88,11 @@ white-space         여백설정.
 ```css
 div { z-index: 0; }     크기가 클수록 앞쪽에 위치.
 
-div { position: static; }   정적 위치
-                relative;   상대 위치
-                fixed;      고정 위치; 화면스크롤시 움직이지않음
+div { position: static; }   정적 위치, 기본값, 다른 Tag관계에의해 자동으로 배치.
+                           임의위치 설정 불가.
+                relative;   상대 위치, 절대 좌표로 위치지정. 
+                fixed;      고정 위치; 원래있던 위치를 기준으로 좌표 지정. 
+                            화면스크롤시 움직이지않음
                 absolute;   절대 위치
       top
       left
@@ -135,15 +137,15 @@ div { width: 300px; margin: auto; } 요소를 감씨는 컨테이너기준으로
 <!-- /* 부모요소 그리드 컨테이너 grid container */ -->
 <div class="container">
 <!-- /* 자식요소 그리드 아이템 grid item */ -->
-	<div class="item">A</div>
-	<div class="item">B</div>
-	<div class="item">C</div>
-	<div class="item">D</div>
-	<div class="item">E</div>
-	<div class="item">F</div>
-	<div class="item">G</div>
-	<div class="item">H</div>
-	<div class="item">I</div>
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+    <div class="item">F</div>
+    <div class="item">G</div>
+    <div class="item">H</div>
+    <div class="item">I</div>
 </div>
 ```
 
@@ -155,13 +157,13 @@ div { width: 300px; margin: auto; } 요소를 감씨는 컨테이너기준으로
     grid-template-columns: 200px 200px 500px;
 
     /* fr(fraction), 1 : 1 : 1 비율의 column생성. */
-	grid-template-columns: 1fr 1fr 1fr 
+    grid-template-columns: 1fr 1fr 1fr 
 
     /* 반복횟수, 반복값 */
-	grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(3, 1fr)
 
     /* 고정, 가변 */
-	grid-template-columns: 200px 1fr
+    grid-template-columns: 200px 1fr
 
     /* 열(column)의 최소값, 최대값, 자동 */
     grid-template-columns: repeat(3, minmax(100px, auto));
@@ -192,11 +194,11 @@ div { width: 300px; margin: auto; } 요소를 감씨는 컨테이너기준으로
 
 
     /* 행(row) 배치 */
-	grid-template-rows: 200px 200px 500px;
-	grid-template-rows: 1fr 1fr 1fr
-	grid-template-rows: repeat(3, 1fr)
-	grid-template-rows: 200px 1fr
-	grid-template-rows: 100px 200px auto
+    grid-template-rows: 200px 200px 500px;
+    grid-template-rows: 1fr 1fr 1fr
+    grid-template-rows: repeat(3, 1fr)
+    grid-template-rows: 200px 1fr
+    grid-template-rows: 100px 200px auto
 }
 ```
 
