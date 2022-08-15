@@ -1,15 +1,10 @@
-<section>
-        <p>JavaeScriptsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p> 
-</section>
+
+    <h1>
+        skdfjsadlksfsdafasd
+    </h1>
+
 
 
 <style>
-    section{
-        border: 1px solid blue;
-        position:static;
-        width: 90vw;
-        max-width: 1280px;
-        overflow-y: scroll;
-    }
 
 </style>

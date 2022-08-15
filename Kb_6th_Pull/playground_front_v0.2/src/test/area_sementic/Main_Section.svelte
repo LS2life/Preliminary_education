@@ -8,11 +8,15 @@
     import Html5 from "../routes/Markup_Html.svelte"
     import CSS3 from "../routes/Stylesheet_css.svelte"
     import About from "../routes/About.svelte";
+    import ATM from "../input_parts/AreaTextMarkdown.svelte"
 
     export let url="";
 </script>
 
+
+<section>
 <Router {url}>
+
     <div>
         <Route path="java" component={Java}/>
         <Route path="javaScript" component={JavaScript}/>
@@ -23,4 +27,17 @@
         <Route path="css3" component={CSS3}/>
         <Route path="about" component={About}/>
     </div>
+
 </Router>
+
+<ATM />
+
+</section>
+
+
+
+<style>
+    section{
+        border: 3px solid pink;
+    }
+</style>

@@ -5,6 +5,18 @@
   import Gate from "./test/area_sementic/Gate_Main.svelte"
 </script>
 
+
+
+<!--
+    기본 프레임은 유지
+
+    최종 완성본 Gate만 연결
+
+    수정코드는 최대범위는  Gate입구측 Sementic참고. 
+    Gate입구 ==> 출구 App
+    Gate출구 <== 입구 App
+-->
+
 <Gate />
 
 

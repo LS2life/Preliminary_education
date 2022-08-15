@@ -37,7 +37,7 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 6vmin;
   line-height: 1.1;
 }
 
@@ -49,6 +49,8 @@ h1 {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 

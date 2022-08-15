@@ -7,15 +7,11 @@
     header {
         border: 1px solid yellow;
 
-        display: flexbox;
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
+        max-width: 1280px;
+    }
 
-        top: 0;
-        left: 0;
-        right: 0;
-        margin: 10px;
-        max-width: 1280;
-
+    h2 {
+        font-size: 2.7vmin;
     }
 </style>
