@@ -30,8 +30,6 @@
 
 </Router>
 
-<ATM />
-
 </section>
 
 

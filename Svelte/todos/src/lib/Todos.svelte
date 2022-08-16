@@ -105,30 +105,39 @@ async function remove(todo){
 		{/each}
 	</div>
 </div>
+
+
+
 <style>
 	.new-todo {
+		border: 1px solid red;
 		font-size: 1.4em;
 		width: 100%;
 		margin: 2em 0 1em 0;
 	}
 
 	.board {
+		border: 1px solid yellow;
 		max-width: 36em;
 		margin: 0 auto;
 	}
 
 	.board > input{
+		border: 1px solid green;
 		width: 95%;
 		height: 30px;
 	}
 
 	.board > h1{
+		border: 1px solid blue;
 		text-align: center;
 		font-size: 4em;
 		font-weight: 400;
 	}
 
 	.left, .right {
+		border: 1px solid orange;
+		text-align: center;
 		float: left;
 		width: 50%;
 		padding: 0 1em 0 0;
@@ -136,12 +145,14 @@ async function remove(todo){
 	}
 
 	h2 {
+		border: 1px solid purple;
 		font-size: 2em;
 		font-weight: 200;
 		user-select: none;
 	}
 
 	label {
+		border: 1px solid pink;
 		top: 0;
 		left: 0;
 		display: block;
@@ -174,6 +185,7 @@ async function remove(todo){
 	}
 
 	label:hover button {
+		border: 1px solid white;
 		opacity: 1;
 	}
 </style>

@@ -6,15 +6,22 @@
 </script>
 
 
+<!-- *
+	? Use Better Commentes
 
-<!--
-    기본 프레임은 유지
+    * 기본 프레임은 유지
 
-    최종 완성본 Gate만 연결
+    * 최종 완성본 Gate만 연결
 
-    수정코드는 최대범위는  Gate입구측 Sementic참고. 
-    Gate입구 ==> 출구 App
-    Gate출구 <== 입구 App
+    * 수정코드는 최대범위는  Gate입구측 Sementic참고. 
+    * Gate입구 ==> 출구 App
+    * Gate출구 <== 입구 App
+-->
+
+<!-- Todo : npm 추가 후 실행 할 것. 
+    ! npm install -save [svelte-routing, marked, svelte-markdown]
+            
+
 -->
 
 <Gate />
