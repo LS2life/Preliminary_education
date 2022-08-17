@@ -10,6 +10,7 @@
     import About from "../view/main_nav_codename/About.svelte";
     import ATM from "../input_parts/AreaTextMarkdown.svelte"
 
+
     export let url="";
 </script>
 
@@ -27,6 +28,9 @@
         <Route path="css3" component={CSS3}/>
         <Route path="about" component={About}/>
     </div>
+    <!-- <div>
+        <Route path="framework" component={framework}/>
+    </div> -->
 
 </Router>
 

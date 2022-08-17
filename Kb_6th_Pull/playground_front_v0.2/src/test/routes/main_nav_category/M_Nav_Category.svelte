@@ -28,7 +28,7 @@
         { id: 'about',      name: 'About',      pass: {About}},
     ];
 
-    let mainMenuAdd = [
+    let mainInfoTech = [
         { id: 'codename', name: 'Code_Name'},
         { id: 'framework', name: 'Framework'},
         { id: 'dbms', name: 'DBMS'},
@@ -46,29 +46,31 @@
         { id: 'etc', name: 'etC.'},
     ]
     
+
 </script>
 
 
 <Router {url}>
+
 <div>
     {#each mNavCategory as {id, name}, i}
         <span transition:slide>
-            {name}
+            <Link to="{id}">{name}</Link>
         </span>
     {/each}
 </div>
 
 <div>
-    {#each mainMenuAdd as {id, name}, i}
+    {#each mainInfoTech as {id, name}, i}
         <span transition:fly>
-            {name}
+            <Link to="{id}">{name}</Link>
         </span>
     {/each}
 </div>
 
 <div>
     {#each languageAdd as {id, name}, i}
-        <span id="main_nav_text" transition:fly>
+        <span transition:fly>
             <Link to="{id}">{name}</Link>
         </span>
     {/each}
