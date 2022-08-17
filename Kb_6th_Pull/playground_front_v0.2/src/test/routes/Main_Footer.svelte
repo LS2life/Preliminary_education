@@ -1,5 +1,7 @@
 <footer>
     <address>
+
+    <!-- Todo E-mail 연결 할 것 -->
         <a href="ls2wist@gmail.com">E-mail</a>
         <a href="https://github.com/LS2life">GitHub </a>
         <br>

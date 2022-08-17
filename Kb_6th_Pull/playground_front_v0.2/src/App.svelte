@@ -2,7 +2,7 @@
   // import svelteLogo from './assets/svelte.svg'
   // import Counter from './lib/Counter.svelte'
 
-  import Gate from "./test/area_sementic/Gate_Main.svelte"
+  import Gate from "./test/routes/Gate_Main.svelte"
 </script>
 
 

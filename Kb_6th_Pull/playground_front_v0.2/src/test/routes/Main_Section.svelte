@@ -1,13 +1,13 @@
 <script>
     import { Router, Link, Route } from "svelte-routing";
-    import Java from "../routes/Language_Java.svelte"
-    import JavaScript from "../routes/Language_JavaScript.svelte"
-    import Python from "../routes/Language_Python.svelte"
-    import Ubuntu from "../routes/Linux_Ubuntu.svelte"
-    import Markdown from "../routes/Markdown_md.svelte"
-    import Html5 from "../routes/Markup_Html.svelte"
-    import CSS3 from "../routes/Stylesheet_css.svelte"
-    import About from "../routes/About.svelte";
+    import Java from "../view/main_nav_codename/Language_Java.svelte"
+    import JavaScript from "../view/main_nav_codename/Language_JavaScript.svelte"
+    import Python from "../view/main_nav_codename/Language_Python.svelte"
+    import Ubuntu from "../view/main_nav_codename/Linux_Ubuntu.svelte"
+    import Markdown from "../view/main_nav_codename/Markdown_md.svelte"
+    import Html5 from "../view/main_nav_codename/Markup_Html.svelte"
+    import CSS3 from "../view/main_nav_codename/Stylesheet_css.svelte"
+    import About from "../view/main_nav_codename/About.svelte";
     import ATM from "../input_parts/AreaTextMarkdown.svelte"
 
     export let url="";
