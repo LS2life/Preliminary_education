@@ -1,51 +1,47 @@
 <script>
-	import { fly, slide } from 'svelte/transition';
-    import { Router, Link, Route } from "svelte-routing";
-    import Java from "../../view/main_nav_codename/Language_Java.svelte"
-    import JavaScript from "../../view/main_nav_codename/Language_JavaScript.svelte"
-    import Python from "../../view/main_nav_codename/Language_Python.svelte"
-    import Ubuntu from "../../view/main_nav_codename/Linux_Ubuntu.svelte"
-    import Markdown from "../../view/main_nav_codename/Markdown_md.svelte"
-    import Html5 from "../../view/main_nav_codename/Markup_Html.svelte"
-    import CSS3 from "../../view/main_nav_codename/Stylesheet_css.svelte"
-    import About from "../../view/main_nav_codename/About.svelte";
-    import ATM from "../../input_parts/AreaTextMarkdown.svelte"
-    export let url="";
-    let visible_first_nav = false;
-    let visible_second_nav = false;
-    let visible_third_nav = false;
+	import { Link,Router } from "svelte-routing";
+import { element } from "svelte/internal";
+	import { fly, scale, crossfade, fade, blur, slide } from 'svelte/transition';
 
+
+    export let url="";
 
 // pass는 pipe 없음
-    let languageAdd = [
-        { id: 'java',       name: 'Java',       pass: {Java}},
-        { id: 'javaScript', name: 'JavaScript', pass: {JavaScript}},
-        { id: 'python',     name: 'Python',     pass: {Python}},
-        { id: 'ubuntu',     name: 'Ubuntu',     pass: {Ubuntu}},
-        { id: 'markdown',   name: 'Markdown',   pass: {Markdown}},
-        { id: 'html5',      name: 'Html5',      pass: {Html5}},
-        { id: 'CSS3',       name: 'CSS3',       pass: {CSS3}},
-        { id: 'about',      name: 'About',      pass: {About}},
-    ];
+    let codeName = [
+                { id: 'java',       name: 'Java'       }, 
+                { id: 'javaScript', name: 'JavaScript' }, 
+                { id: 'python',     name: 'Python'    },     
+                { id: 'ubuntu',     name: 'Ubuntu'     },    
+                { id: 'markdown',   name: 'Markdown'   }, 
+                { id: 'html5',      name: 'Html5'      },   
+                { id: 'CSS3',       name: 'CSS3'       },   
+                { id: 'about',      name: 'About'      }, 
+            ];
 
-    let mainInfoTech = [
-        { id: 'codename', name: 'Code_Name'},
-        { id: 'framework', name: 'Framework'},
-        { id: 'dbms', name: 'DBMS'},
-        { id: 'vc', name: 'VC'},
-        { id: 'os', name: 'OS'},
-        { id: 'etc', name: 'Etc.'},
+    let InfoTech = [
+        { $: codeName,   name: 'CodeName'       },
+        { id: 'framework',  name: 'Framework'},
+        { id: 'dbms',       name: 'DBMS'     },
+        { id: 'vc',         name: 'VC'       },
+        { id: 'os',         name: 'OS'       },
+        { id: 'etc',        name: 'Etc.'     },
     ]
 
-    let mNavCategory = [
-        { id: 'it', name: 'InfoTech'},
-        { id: 'cosmos', name: 'Cosmos'},
-        { id: 'engineering', name: 'Engineering'},
-        { id: 'language', name: 'Language'},
-        { id: 'sf', name: 'SciFic'},
-        { id: 'etc', name: 'etC.'},
+    const mNavCategory = [
+        { $: InfoTech,   name: 'InfoTech'  },
+        { id: 'cosmos',     name: 'Cosmos'     },
+        { id: 'engineering',name: 'Engineering'},
+        { id: 'language',   name: 'Language'   },
+        { id: 'scific',     name: 'SciFic'     },
+        { id: 'etc',        name: 'etC.'       },
     ]
     
+    let active = false;
+    let active2 = false;
+    let active3 = false;
+    const isActive = () => { active = !active };
+    const isActive2 = () => { active2 = !active2 };
+    const isActive3 = () => { active3 = !active3 };
 
 </script>
 
@@ -53,43 +49,74 @@
 <Router {url}>
 
 <div>
-    {#each mNavCategory as {id, name}, i}
+    <!-- ! Main menu folding +,-표시 따로 -->
+    <!-- 
+        {#if active}
+            <button on:click={isActive} >-</button>
+        {:else}
+            <button on:click={isActive} >+</button>
+        {/if}
+    -->
+
+    <!-- 
+        Todo : Button > Main menu folding +,- 표시 lifecycle afterUpdate 적용할 것. 
+        Todo : 메뉴 확장시 모션 딜레이 줄것.
+    -->
+    {#if active}
+        {#each mNavCategory as {id, name}, i}
+            <span 
+                on:focus 
+                on:mouseover={isActive2} 
+                transition:fly="{{
+                    delay:500,
+                    duration:1000,
+                    x:90
+                }}" 
+            >
+                <Link to="{id}">{name}</Link>
+            </span>
+        {/each}
+        
+        <button on:click={isActive} >-</button>
+        
+        <!-- <button on:click={isActive} >{active === true ? '-' : '+' }</button> -->
+
+    {:else}
+        <button on:click={isActive} >+</button>
+        <!-- <button on:click={isActive} >{active === false ? '+' : '-' }</button> -->
+
+    {/if}
+</div>    
+
+<div>
+{#if active2 && active}
+    {#each InfoTech as {id, name}, i}
+        <span on:focus on:mouseover={isActive3} transition:slide="{{delay:1000}}">
+            <Link to="{id}">{name}</Link>
+
+        </span>
+    {/each}
+{/if}
+</div>
+
+<div>
+{#if active3 && active2 && active}
+    {#each codeName as {id, name}, i}
         <span transition:slide>
             <Link to="{id}">{name}</Link>
         </span>
     {/each}
+{/if}
 </div>
-
-<div>
-    {#each mainInfoTech as {id, name}, i}
-        <span transition:fly>
-            <Link to="{id}">{name}</Link>
-        </span>
-    {/each}
-</div>
-
-<div>
-    {#each languageAdd as {id, name}, i}
-        <span transition:fly>
-            <Link to="{id}">{name}</Link>
-        </span>
-    {/each}
-</div>
-
-
 </Router>
 
-<style>
-    nav {
-        border: 1px solid red;
 
-        position: sticky;
-        top: 0;
-    }
+<style>
 
     div {
         border: 1px solid lawngreen;
 
+        display: inline-table ;
         margin: 10px;
     }
 
@@ -101,6 +128,10 @@
         font-size: 2.5vmin;
         max-width: 1280px;
         width: 100%; 
+    }
+
+    span:hover {
+        background-color: aqua;
     }
 
 </style>
