@@ -4,7 +4,7 @@
 
 
 
-<nav>
+<nav readonly>
 <Nav1 />
 </nav>
 
@@ -16,6 +16,6 @@
 
         position: sticky;
         top: 0;
-        width: auto;
+        margin: auto;
     }
 </style>

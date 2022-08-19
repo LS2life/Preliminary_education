@@ -1,6 +1,5 @@
 <script>
 	import { Link,Router } from "svelte-routing";
-import { element } from "svelte/internal";
 	import { fly, scale, crossfade, fade, blur, slide } from 'svelte/transition';
 
 
@@ -18,16 +17,44 @@ import { element } from "svelte/internal";
                 { id: 'about',      name: 'About'      }, 
             ];
 
-    let InfoTech = [
-        { $: codeName,   name: 'CodeName'       },
-        { id: 'framework',  name: 'Framework'},
-        { id: 'dbms',       name: 'DBMS'     },
-        { id: 'vc',         name: 'VC'       },
-        { id: 'os',         name: 'OS'       },
-        { id: 'etc',        name: 'Etc.'     },
+    let framework = [
+        { id:'svelte', name:'Svelte'},
+        { id:'spring5', name:'Spring5_Boot'},
+        // { id:'', name:''},
     ]
 
-    const mNavCategory = [
+    let dbms = [
+        { id:'mysql', name:'MySQL'},
+        // { id:'', name:''},
+    ]
+
+    let vc = [
+        { id:'git', name:'Git'},
+        { id:'github', name:'GitHub'},
+        // { id:'', name:''},
+    ]
+
+    let os = [
+        { id:'ubuntu', name:'Ubuntu'},
+        { id:'windows', name:'Windows'},
+        // { id:'', name:''},
+    ]
+
+    let etc = [
+        { id:'fetc', name:'F_etC'},
+        // { id:'', name:''},
+    ]
+
+    let InfoTech = [
+        { $: codeName,   name: 'CodeName'       },
+        { $: framework,  name: 'Framework'},
+        { $: dbms,       name: 'DBMS'     },
+        { $: vc,         name: 'VC'       },
+        { $: os,         name: 'OS'       },
+        { $: etc,        name: 'Etc.'     },
+    ]
+
+    let mNavCategory = [
         { $: InfoTech,   name: 'InfoTech'  },
         { id: 'cosmos',     name: 'Cosmos'     },
         { id: 'engineering',name: 'Engineering'},
@@ -42,96 +69,98 @@ import { element } from "svelte/internal";
     const isActive = () => { active = !active };
     const isActive2 = () => { active2 = !active2 };
     const isActive3 = () => { active3 = !active3 };
-
 </script>
 
 
 <Router {url}>
-
-<div>
-    <!-- ! Main menu folding +,-표시 따로 -->
-    <!-- 
+<div class="mMenuContainer">
+    <div class="mMenuList">
         {#if active}
-            <button on:click={isActive} >-</button>
-        {:else}
-            <button on:click={isActive} >+</button>
+            <div class="mMainMenu" transition:fly="{{duration:700, x:200}}">
+                {#each mNavCategory as {id, name}, i}
+                    <span>
+                        <Link to="{id}" on:click={isActive2} >{name}</Link>
+                    </span>
+                {/each}
+                    
+                    <!-- <button on:click={isActive} >-</button> -->
+                    
+                    <!-- <button on:click={isActive} >{active === true ? '-' : '+' }</button> -->
+
+                <!-- {:else}
+                    <button on:click={isActive} >+</button> -->
+                    <!-- <button on:click={isActive} >{active === false ? '+' : '-' }</button> -->
+            </div>
         {/if}
-    -->
 
-    <!-- 
-        Todo : Button > Main menu folding +,- 표시 lifecycle afterUpdate 적용할 것. 
-        Todo : 메뉴 확장시 모션 딜레이 줄것.
-    -->
-    {#if active}
-        {#each mNavCategory as {id, name}, i}
-            <span 
-                on:focus 
-                on:mouseover={isActive2} 
-                transition:fly="{{
-                    delay:500,
-                    duration:1000,
-                    x:90
-                }}" 
-            >
-                <Link to="{id}">{name}</Link>
-            </span>
-        {/each}
-        
-        <button on:click={isActive} >-</button>
-        
-        <!-- <button on:click={isActive} >{active === true ? '-' : '+' }</button> -->
+        {#if active2 }
+            <div class="mMainMenu">
+            {#each InfoTech as {id, name}, i}
+                <span class="mMainMenuFold" transition:slide="{{duration:1000}}">
+                    <Link to="{id}" on:click={isActive3}>{name}</Link>
+                </span>
+            {/each}
+            </div>
+        {/if}
 
-    {:else}
-        <button on:click={isActive} >+</button>
-        <!-- <button on:click={isActive} >{active === false ? '+' : '-' }</button> -->
+        {#if active3 }
+            <div class="mMainMenu">
+            {#each codeName as {id, name}, i}
+                <span class="mMainMenuFold" transition:slide="{{duration:1000}}">
+                    <Link to="{id}">{name}</Link>
+                </span>
+            {/each}
+            </div>
+        {/if}
 
-    {/if}
-</div>    
+    </div>
 
-<div>
-{#if active2 && active}
-    {#each InfoTech as {id, name}, i}
-        <span on:focus on:mouseover={isActive3} transition:slide="{{delay:1000}}">
-            <Link to="{id}">{name}</Link>
-
-        </span>
-    {/each}
-{/if}
-</div>
-
-<div>
-{#if active3 && active2 && active}
-    {#each codeName as {id, name}, i}
-        <span transition:slide>
-            <Link to="{id}">{name}</Link>
-        </span>
-    {/each}
-{/if}
+    <div id="mMenuFoldButt">
+        <!-- ! Main menu folding +,-표시 따로 -->
+            {#if active}
+                <button on:click={isActive} >-</button>
+            {:else}
+                <button on:click={isActive} >+</button>
+            {/if}
+    </div>
 </div>
 </Router>
 
 
 <style>
 
+    .mMenuContainer{
+        display: flex;
+        justify-content:end;
+    }
+
+    .mMainMenu{
+        font-size: 2.5vmin;
+        padding: 0.2em;
+    }
+
+    #mMenuFoldButt{
+        border: 1px solid red;
+        margin: 0.1em;
+        font-size: 1.5vmin;
+
+    }
+
     div {
         border: 1px solid lawngreen;
-
-        display: inline-table ;
-        margin: 10px;
     }
 
-    span {
+    span{
         border: 1px solid lawngreen;
 
-        padding: 1vmin;
-        display: inlinex;
-        font-size: 2.5vmin;
         max-width: 1280px;
         width: 100%; 
+        margin: 0.1em;
     }
 
-    span:hover {
+    span:hover{
         background-color: aqua;
+
     }
 
 </style>

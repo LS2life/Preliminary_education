@@ -1,4 +1,4 @@
-<footer>
+<footer readonly>
     <address>
 
     <!-- Todo E-mail 연결 할 것 -->
