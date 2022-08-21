@@ -8,6 +8,9 @@
     import Html5 from "../view/m_nav_infotech/m_nav_info_codename/Markup_Html.svelte"
     import CSS3 from "../view/m_nav_infotech/m_nav_info_codename/Stylesheet_css.svelte"
     import About from "../view/m_nav_infotech/m_nav_info_codename/About.svelte";
+    import Cosmos from "../view/m_nav_cosmos/img_jamesWebb.svelte"
+    import MainSectionBody from "./Main_Section_Body.svelte";
+    import MainSectionHeader from "./Main_Section_Header.svelte";
 
     let codename = [
             { id: 'java',       name: Java       }, 
@@ -18,6 +21,8 @@
             { id: 'html5',      name: Html5     },   
             { id: 'CSS3',       name: CSS3       },   
             { id: 'about',      name: About      }, 
+            { id: 'cosmos',     name: Cosmos    },
+
         ];
     
 
@@ -26,6 +31,8 @@
 
 
 <section readonly>
+
+    <MainSectionHeader />
 
     <Router {url}>
 
@@ -47,6 +54,8 @@
         </div> -->
     
     </Router>
+
+    <MainSectionBody />
 
 </section>
 

@@ -1,7 +1,7 @@
 <script>
 	import { Link,Router } from "svelte-routing";
-	import { fly, scale, crossfade, fade, blur, slide } from 'svelte/transition';
-
+    import { fly, scale, crossfade, fade, blur, slide } from 'svelte/transition';
+    import SubMenu from "./M_Nav_sub1.svelte"
 
     export let url="";
 
@@ -54,6 +54,7 @@
         { $: etc,        name: 'Etc.'     },
     ]
 
+
     let mNavCategory = [
         { $: InfoTech,   name: 'InfoTech'  },
         { id: 'cosmos',     name: 'Cosmos'     },
@@ -69,8 +70,24 @@
     const isActive = () => { active = !active };
     const isActive2 = () => { active2 = !active2 };
     const isActive3 = () => { active3 = !active3 };
+
+    let sdf = [active, active2, active3]
+
+    function sda () {
+        if (active && active2) {
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
 </script>
 
+
+<!-- 
+    Todo :submenu를 표준 switch로 사용 [...{grup}] 구문 사용해볼 것.
+-->
 
 <Router {url}>
 <div class="mMenuContainer">
@@ -79,23 +96,26 @@
             <div class="mMainMenu" transition:fly="{{duration:700, x:200}}">
                 {#each mNavCategory as {id, name}, i}
                     <span>
-                        <Link to="{id}" on:click={isActive2} >{name}</Link>
+                        <Link to="{id}" on:click={isActive2}>{name}</Link>
                     </span>
                 {/each}
-                    
-                    <!-- <button on:click={isActive} >-</button> -->
-                    
-                    <!-- <button on:click={isActive} >{active === true ? '-' : '+' }</button> -->
-
-                <!-- {:else}
-                    <button on:click={isActive} >+</button> -->
-                    <!-- <button on:click={isActive} >{active === false ? '+' : '-' }</button> -->
             </div>
         {/if}
 
-        {#if active2 }
+        <!-- <Route path="submenu" component= {SubMenu} /> -->
+        <!-- <SubMenu/> -->
+
+            {#if active2 }
             <div class="mMainMenu">
             {#each InfoTech as {id, name}, i}
+            
+            <!--
+                on:focus on:mouseover 구문 in: animation 안먹힘. 
+                out: animarion 정상동작
+                
+                on:mouseover 사용시 lifecycle 또는 Delay 적용 필요.
+
+              -->
                 <span class="mMainMenuFold" transition:slide="{{duration:1000}}">
                     <Link to="{id}" on:click={isActive3}>{name}</Link>
                 </span>
@@ -116,7 +136,6 @@
     </div>
 
     <div id="mMenuFoldButt">
-        <!-- ! Main menu folding +,-표시 따로 -->
             {#if active}
                 <button on:click={isActive} >-</button>
             {:else}
