@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp07_02", "Csharp07_02\Csharp07_02.csproj", "{212A8C7C-CE55-492F-862F-7DA124A7F4DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A8F6D2D9-E2C4-4144-B15A-D7B072CFB748}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루션 항목", "{AEC2574C-73C2-42B1-A973-1B9AD22E860C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{212A8C7C-CE55-492F-862F-7DA124A7F4DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{212A8C7C-CE55-492F-862F-7DA124A7F4DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{212A8C7C-CE55-492F-862F-7DA124A7F4DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{212A8C7C-CE55-492F-862F-7DA124A7F4DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {700A5615-7CC9-4B2B-9C3A-2ECC02AE8306}
+	EndGlobalSection
+EndGlobal

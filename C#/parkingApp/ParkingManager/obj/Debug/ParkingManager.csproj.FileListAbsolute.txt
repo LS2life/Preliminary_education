@@ -1,0 +1,11 @@
+C:\Inrhdwlsmd\220404_ABCD\C#\parkingApp\ParkingManager\bin\Debug\ParkingManager.exe.config
+C:\Inrhdwlsmd\220404_ABCD\C#\parkingApp\ParkingManager\bin\Debug\ParkingManager.exe
+C:\Inrhdwlsmd\220404_ABCD\C#\parkingApp\ParkingManager\bin\Debug\ParkingManager.pdb
+C:\Inrhdwlsmd\220404_ABCD\C#\parkingApp\ParkingManager\obj\Debug\ParkingManager.csproj.AssemblyReference.cache
+C:\Inrhdwlsmd\220404_ABCD\C#\parkingApp\ParkingManager\obj\Debug\ParkingManager.csproj.SuggestedBindingRedirects.cache
+C:\Inrhdwlsmd\220404_ABCD\C#\parkingApp\ParkingManager\obj\Debug\ParkingManager.MainForm.resources
+C:\Inrhdwlsmd\220404_ABCD\C#\parkingApp\ParkingManager\obj\Debug\ParkingManager.Properties.Resources.resources
+C:\Inrhdwlsmd\220404_ABCD\C#\parkingApp\ParkingManager\obj\Debug\ParkingManager.csproj.GenerateResource.cache
+C:\Inrhdwlsmd\220404_ABCD\C#\parkingApp\ParkingManager\obj\Debug\ParkingManager.csproj.CoreCompileInputs.cache
+C:\Inrhdwlsmd\220404_ABCD\C#\parkingApp\ParkingManager\obj\Debug\ParkingManager.exe
+C:\Inrhdwlsmd\220404_ABCD\C#\parkingApp\ParkingManager\obj\Debug\ParkingManager.pdb

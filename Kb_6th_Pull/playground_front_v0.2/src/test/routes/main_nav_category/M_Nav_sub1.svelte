@@ -11,7 +11,7 @@
     const isActive = () => { active = !active };
 </script>
 
-<Router {url}>>
+<Router {url}>
     {#if active }
         <div class="mMainMenu">
         {#each InfoTech as {id, name}, i}
