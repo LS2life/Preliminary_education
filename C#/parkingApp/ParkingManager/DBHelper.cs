@@ -31,11 +31,7 @@ namespace ParkingManager
         public static void ConnectDB()
         {
             conn.ConnectionString =
-                string.Format("Data Source=({0}); "
-                + "initial Catalog = {1};" +
-                "integrated Security = {2};" +
-                "Timeout=3",
-                "local", "MYDB", "SSPI");
+                string.Format("Data Source=({0}); " + "initial Catalog = {1};" + "integrated Security = {2};" + "Timeout=3", "local", "MYDB", "SSPI");
             conn=new SqlConnection(conn.ConnectionString);
             conn.Open();
         }
