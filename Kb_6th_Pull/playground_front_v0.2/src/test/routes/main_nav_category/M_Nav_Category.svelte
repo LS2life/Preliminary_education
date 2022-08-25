@@ -1,4 +1,5 @@
 <script>
+
 	import { Link,Router } from "svelte-routing";
     import { fly, scale, crossfade, fade, blur, slide } from 'svelte/transition';
     import SubMenu from "./M_Nav_sub1.svelte"
@@ -40,7 +41,7 @@
         // { id:'', name:''},
     ]
 
-    let etc = [
+    let F_etc = [
         { id:'fetc', name:'F_etC'},
         // { id:'', name:''},
     ]
@@ -51,17 +52,40 @@
         { $: dbms,       name: 'DBMS'     },
         { $: vc,         name: 'VC'       },
         { $: os,         name: 'OS'       },
-        { $: etc,        name: 'Etc.'     },
+        { $: F_etc,        name: 'Etc.'     },
     ]
 
+    let Cosmos = [
+        { id: 'cosmos', name: 'Cosmos'}
+    ]
+
+    let Engineering =[
+        { id: 'engineering', name: 'Engineering'}
+    ]
+
+    let Language = [
+        { id: 'usenglish', name: 'USEnglish' },
+        { id: 'dasdeutsche', name: 'Deutsche'},
+        { id: 'espanol', name: 'Espanol' },
+        { id: 'francais', name: 'Francais' },
+        { id: 'pyccknn', name: 'Pyccknn' },
+    ]
+
+    let SciFic = [
+        { id: 'ironman', name: 'Ironman'}
+    ]
+
+    let etC = [
+        { id: 'etC', name: 'etC'}
+    ]
 
     let mNavCategory = [
         { $: InfoTech,   name: 'InfoTech'  },
-        { id: 'cosmos',     name: 'Cosmos'     },
-        { id: 'engineering',name: 'Engineering'},
-        { id: 'language',   name: 'Language'   },
-        { id: 'scific',     name: 'SciFic'     },
-        { id: 'etc',        name: 'etC.'       },
+        { $: Cosmos,     name: 'Cosmos'     },
+        { $: Engineering,name: 'Engineering'},
+        { $: Language,   name: 'Language'   },
+        { $: SciFic,     name: 'SciFic'     },
+        { $: etC,        name: 'etC.'       },
     ]
     
     let active = false;

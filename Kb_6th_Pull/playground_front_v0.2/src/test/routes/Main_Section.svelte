@@ -1,4 +1,6 @@
 <script>
+	import EtC from './../view/main_nav_etc/etC.svelte';
+	import English from './../view/m_nav_language/English.svelte';
     import { Router, Link, Route } from "svelte-routing";
     import Java from "../view/m_nav_infotech/m_nav_info_codename/Language_Java.svelte"
     import JavaScript from "../view/m_nav_infotech/m_nav_info_codename/Language_JavaScript.svelte"
@@ -11,8 +13,16 @@
     import Cosmos from "../view/m_nav_cosmos/img_jamesWebb.svelte"
     import MainSectionBody from "./Main_Section_Body.svelte";
     import MainSectionHeader from "./Main_Section_Header.svelte";
+    import Engineering from "../view/m_nav_engineering/Engineering.svelte"
+    import USEnglish from "../view/m_nav_language/English.svelte"
+    import Deutsche from "../view/m_nav_language/das_Deutsche.svelte"
+    import Espanol from "../view/m_nav_language/español.svelte";
+    import Francais from "../view/m_nav_language/français.svelte";
+    import Pyccknn from "../view/m_nav_language/Русский.svelte"
+    import SciFic from "../view/m_nav_sicfic/IronMan.svelte"
+    import etC from "../view/m_nav_etc/m_etc.svelte"
 
-    let codename = [
+    let end_view = [
             { id: 'java',       name: Java       }, 
             { id: 'javaScript', name: JavaScript }, 
             { id: 'python',     name: Python     },     
@@ -22,6 +32,15 @@
             { id: 'CSS3',       name: CSS3       },   
             { id: 'about',      name: About      }, 
             { id: 'cosmos',     name: Cosmos    },
+            { id: 'engineering', name: Engineering },
+            { id: 'usenglish', name: USEnglish },
+            { id: 'dasdeutsche', name: Deutsche},
+            { id: 'espanol', name: Espanol },
+            { id: 'francais', name: Francais },
+            { id: 'pyccknn', name: Pyccknn },
+            { id: 'scific', name: SciFic },
+            { id: 'etc', name: etC },
+            //{ id: '', name: },
 
         ];
     
@@ -36,7 +55,7 @@
 
     <Router {url}>
 
-        {#each codename as {id, name}}
+        {#each end_view as {id, name}}
             <Route path="{id}" component={name} />
             
             <!-- <Route path="java" component={Java}/>

@@ -2,10 +2,11 @@
     import { Link, Router, Route } from "svelte-routing";
     import { fly, scale, crossfade, fade, blur, slide } from 'svelte/transition';
     export let url = ""
+    export let fold;
+    export let id;
+    export let name;
 
-    let InfoTech = [
-        { id: 'submenu',  name: 'SubMenu'     },
-    ]
+
 
     let active = false;
     const isActive = () => { active = !active };
@@ -14,7 +15,7 @@
 <Router {url}>
     {#if active }
         <div class="mMainMenu">
-        {#each InfoTech as {id, name}, i}
+        {#each {fold} as {id, name}, i}
             <span class="mMainMenuFold" transition:slide="{{duration:1000}}">
                 <Link to="{id}" on:click={isActive}>{name}</Link>
             </span>
