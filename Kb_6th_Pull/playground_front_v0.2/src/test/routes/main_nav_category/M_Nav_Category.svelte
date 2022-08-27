@@ -1,138 +1,131 @@
 <script>
+  import { Link, Router } from "svelte-routing";
+  import { fly, scale, crossfade, fade, blur, slide } from "svelte/transition";
+  import SubMenu from "./M_Nav_sub1.svelte";
 
-	import { Link,Router } from "svelte-routing";
-    import { fly, scale, crossfade, fade, blur, slide } from 'svelte/transition';
-    import SubMenu from "./M_Nav_sub1.svelte"
+  export let url = "";
 
-    export let url="";
+  // pass는 pipe 없음
+  let codeName = [
+    { id: "java", name: "Java" },
+    { id: "javaScript", name: "JavaScript" },
+    { id: "python", name: "Python" },
+    { id: "ubuntu", name: "Ubuntu" },
+    { id: "markdown", name: "Markdown" },
+    { id: "html5", name: "Html5" },
+    { id: "CSS3", name: "CSS3" },
+    { id: "about", name: "About" },
+  ];
 
-// pass는 pipe 없음
-    let codeName = [
-                { id: 'java',       name: 'Java'       }, 
-                { id: 'javaScript', name: 'JavaScript' }, 
-                { id: 'python',     name: 'Python'    },     
-                { id: 'ubuntu',     name: 'Ubuntu'     },    
-                { id: 'markdown',   name: 'Markdown'   }, 
-                { id: 'html5',      name: 'Html5'      },   
-                { id: 'CSS3',       name: 'CSS3'       },   
-                { id: 'about',      name: 'About'      }, 
-            ];
+  let framework = [
+    { id: "svelte", name: "Svelte" },
+    { id: "spring5", name: "Spring5_Boot" },
+    // { id:'', name:''},
+  ];
 
-    let framework = [
-        { id:'svelte', name:'Svelte'},
-        { id:'spring5', name:'Spring5_Boot'},
-        // { id:'', name:''},
-    ]
+  let dbms = [
+    { id: "mysql", name: "MySQL" },
+    // { id:'', name:''},
+  ];
 
-    let dbms = [
-        { id:'mysql', name:'MySQL'},
-        // { id:'', name:''},
-    ]
+  let vc = [
+    { id: "git", name: "Git" },
+    { id: "github", name: "GitHub" },
+    // { id:'', name:''},
+  ];
 
-    let vc = [
-        { id:'git', name:'Git'},
-        { id:'github', name:'GitHub'},
-        // { id:'', name:''},
-    ]
+  let os = [
+    { id: "ubuntu", name: "Ubuntu" },
+    { id: "windows", name: "Windows" },
+    // { id:'', name:''},
+  ];
 
-    let os = [
-        { id:'ubuntu', name:'Ubuntu'},
-        { id:'windows', name:'Windows'},
-        // { id:'', name:''},
-    ]
+  let F_etc = [
+    { id: "fetc", name: "F_etC" },
+    // { id:'', name:''},
+  ];
 
-    let F_etc = [
-        { id:'fetc', name:'F_etC'},
-        // { id:'', name:''},
-    ]
+  let InfoTech = [
+    { $: codeName, name: "CodeName" },
+    { $: framework, name: "Framework" },
+    { $: dbms, name: "DBMS" },
+    { $: vc, name: "VC" },
+    { $: os, name: "OS" },
+    { $: F_etc, name: "Etc." },
+  ];
 
-    let InfoTech = [
-        { $: codeName,   name: 'CodeName'       },
-        { $: framework,  name: 'Framework'},
-        { $: dbms,       name: 'DBMS'     },
-        { $: vc,         name: 'VC'       },
-        { $: os,         name: 'OS'       },
-        { $: F_etc,        name: 'Etc.'     },
-    ]
+  let Cosmos = [{ id: "cosmos", name: "Cosmos" }];
 
-    let Cosmos = [
-        { id: 'cosmos', name: 'Cosmos'}
-    ]
+  let Engineering = [{ id: "engineering", name: "Engineering" }];
 
-    let Engineering =[
-        { id: 'engineering', name: 'Engineering'}
-    ]
+  let Language = [
+    { id: "usenglish", name: "USEnglish" },
+    { id: "dasdeutsche", name: "Deutsche" },
+    { id: "espanol", name: "Espanol" },
+    { id: "francais", name: "Francais" },
+    { id: "pyccknn", name: "Pyccknn" },
+  ];
 
-    let Language = [
-        { id: 'usenglish', name: 'USEnglish' },
-        { id: 'dasdeutsche', name: 'Deutsche'},
-        { id: 'espanol', name: 'Espanol' },
-        { id: 'francais', name: 'Francais' },
-        { id: 'pyccknn', name: 'Pyccknn' },
-    ]
+  let SciFic = [{ id: "ironman", name: "Ironman" }];
 
-    let SciFic = [
-        { id: 'ironman', name: 'Ironman'}
-    ]
+  let etC = [{ id: "etC", name: "etC" }];
 
-    let etC = [
-        { id: 'etC', name: 'etC'}
-    ]
+  let mNavCategory = [
+    { $: InfoTech, name: "InfoTech" },
+    { $: Cosmos, name: "Cosmos" },
+    { $: Engineering, name: "Engineering" },
+    { $: Language, name: "Language" },
+    { $: SciFic, name: "SciFic" },
+    { $: etC, name: "etC." },
+  ];
 
-    let mNavCategory = [
-        { $: InfoTech,   name: 'InfoTech'  },
-        { $: Cosmos,     name: 'Cosmos'     },
-        { $: Engineering,name: 'Engineering'},
-        { $: Language,   name: 'Language'   },
-        { $: SciFic,     name: 'SciFic'     },
-        { $: etC,        name: 'etC.'       },
-    ]
-    
-    let active = false;
-    let active2 = false;
-    let active3 = false;
-    const isActive = () => { active = !active };
-    const isActive2 = () => { active2 = !active2 };
-    const isActive3 = () => { active3 = !active3 };
+  let active = false;
+  let active2 = false;
+  let active3 = false;
+  const isActive = () => {
+    active = !active;
+  };
+  const isActive2 = () => {
+    active2 = !active2;
+  };
+  const isActive3 = () => {
+    active3 = !active3;
+  };
 
-    let sdf = [active, active2, active3]
+  let sdf = [active, active2, active3];
 
-    function sda () {
-        if (active && active2) {
-            return true;
-        }else{
-            return false;
-        }
-
+  function sda() {
+    if (active && active2) {
+      return true;
+    } else {
+      return false;
     }
-
+  }
 </script>
-
 
 <!-- 
     Todo :submenu를 표준 switch로 사용 [...{grup}] 구문 사용해볼 것.
 -->
 
 <Router {url}>
-<div class="mMenuContainer">
+  <div class="mMenuContainer">
     <div class="mMenuList">
-        {#if active}
-            <div class="mMainMenu" transition:fly="{{duration:700, x:200}}">
-                {#each mNavCategory as {id, name}, i}
-                    <span>
-                        <Link to="{id}" on:click={isActive2}>{name}</Link>
-                    </span>
-                {/each}
-            </div>
-        {/if}
+      {#if active}
+        <div class="mMainMenu" transition:fly={{ duration: 700, x: 200 }}>
+          {#each mNavCategory as { id, name }, i}
+            <span>
+              <Link to={id} on:click={isActive2}>{name}</Link>
+            </span>
+          {/each}
+        </div>
+      {/if}
 
-        <!-- <Route path="submenu" component= {SubMenu} /> -->
-        <!-- <SubMenu/> -->
+      <!-- <Route path="submenu" component= {SubMenu} /> -->
+      <!-- <SubMenu/> -->
 
-            {#if active2 }
-            <div class="mMainMenu">
-            {#each InfoTech as {id, name}, i}
-            
+      {#if active2}
+        <div class="mMainMenu">
+          {#each InfoTech as { id, name }, i}
             <!--
                 on:focus on:mouseover 구문 in: animation 안먹힘. 
                 out: animarion 정상동작
@@ -140,70 +133,64 @@
                 on:mouseover 사용시 lifecycle 또는 Delay 적용 필요.
 
               -->
-                <span class="mMainMenuFold" transition:slide="{{duration:1000}}">
-                    <Link to="{id}" on:click={isActive3}>{name}</Link>
-                </span>
-            {/each}
-            </div>
-        {/if}
+            <span class="mMainMenuFold" transition:slide={{ duration: 1000 }}>
+              <Link to={id} on:click={isActive3}>{name}</Link>
+            </span>
+          {/each}
+        </div>
+      {/if}
 
-        {#if active3 }
-            <div class="mMainMenu">
-            {#each codeName as {id, name}, i}
-                <span class="mMainMenuFold" transition:slide="{{duration:1000}}">
-                    <Link to="{id}">{name}</Link>
-                </span>
-            {/each}
-            </div>
-        {/if}
-
+      {#if active3}
+        <div class="mMainMenu">
+          {#each codeName as { id, name }, i}
+            <span class="mMainMenuFold" transition:slide={{ duration: 1000 }}>
+              <Link to={id}>{name}</Link>
+            </span>
+          {/each}
+        </div>
+      {/if}
     </div>
 
     <div id="mMenuFoldButt">
-            {#if active}
-                <button on:click={isActive} >-</button>
-            {:else}
-                <button on:click={isActive} >+</button>
-            {/if}
+      {#if active}
+        <button on:click={isActive}>-</button>
+      {:else}
+        <button on:click={isActive}>+</button>
+      {/if}
     </div>
-</div>
+  </div>
 </Router>
 
-
 <style>
+  .mMenuContainer {
+    display: flex;
+    justify-content: end;
+  }
 
-    .mMenuContainer{
-        display: flex;
-        justify-content:end;
-    }
+  .mMainMenu {
+    font-size: 2.5vmin;
+    padding: 0.2em;
+  }
 
-    .mMainMenu{
-        font-size: 2.5vmin;
-        padding: 0.2em;
-    }
+  #mMenuFoldButt {
+    border: 1px solid red;
+    margin: 0.1em;
+    font-size: 1.5vmin;
+  }
 
-    #mMenuFoldButt{
-        border: 1px solid red;
-        margin: 0.1em;
-        font-size: 1.5vmin;
+  div {
+    border: 1px solid lawngreen;
+  }
 
-    }
+  span {
+    border: 1px solid lawngreen;
 
-    div {
-        border: 1px solid lawngreen;
-    }
+    max-width: 1280px;
+    width: 100%;
+    margin: 0.1em;
+  }
 
-    span{
-        border: 1px solid lawngreen;
-
-        max-width: 1280px;
-        width: 100%; 
-        margin: 0.1em;
-    }
-
-    span:hover{
-        background-color: aqua;
-
-    }
-
+  span:hover {
+    background-color: aqua;
+  }
 </style>
