@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-CafekioskApplication<cafekiosk>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "io.github.ls2life.cafekiosk.CafekioskApplication",
+      "projectName": "cafekiosk",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

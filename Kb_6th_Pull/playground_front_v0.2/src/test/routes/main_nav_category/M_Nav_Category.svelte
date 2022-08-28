@@ -1,7 +1,6 @@
 <script>
   import { Link, Router } from "svelte-routing";
   import { fly, scale, crossfade, fade, blur, slide } from "svelte/transition";
-  import SubMenu from "./M_Nav_sub1.svelte";
 
   export let url = "";
 
@@ -56,7 +55,7 @@
 
   let Cosmos = [{ id: "cosmos", name: "Cosmos" }];
 
-  let Engineering = [{ id: "engineering", name: "Engineering" }];
+  let engineering = [{ id: "engineering", name: "Engineering" }];
 
   let Language = [
     { id: "usenglish", name: "USEnglish" },
@@ -71,17 +70,18 @@
   let etC = [{ id: "etC", name: "etC" }];
 
   let mNavCategory = [
-    { $: InfoTech, name: "InfoTech" },
-    { $: Cosmos, name: "Cosmos" },
-    { $: Engineering, name: "Engineering" },
-    { $: Language, name: "Language" },
-    { $: SciFic, name: "SciFic" },
-    { $: etC, name: "etC." },
+    { id: "infotech", name: "InfoTech" },
+    { id: "cosmos", name: "Cosmos" },
+    { id: "engineering", name: "Engineering" },
+    { id: "language", name: "Language" },
+    { id: "scific", name: "SciFic" },
+    { id: "etc", name: "etC." },
   ];
 
   let active = false;
   let active2 = false;
   let active3 = false;
+
   const isActive = () => {
     active = !active;
   };
@@ -92,8 +92,6 @@
     active3 = !active3;
   };
 
-  let sdf = [active, active2, active3];
-
   function sda() {
     if (active && active2) {
       return true;
@@ -101,10 +99,14 @@
       return false;
     }
   }
+  function reply_click(id) {
+    this.id = id;
+    alert(id);
+  }
 </script>
 
 <!-- 
-    Todo :submenu를 표준 switch로 사용 [...{grup}] 구문 사용해볼 것.
+	Todo :submenu를 표준 switch로 사용 [...{grup}] 구문 사용해볼 것.
 -->
 
 <Router {url}>
@@ -114,48 +116,44 @@
         <div class="mMainMenu" transition:fly={{ duration: 700, x: 200 }}>
           {#each mNavCategory as { id, name }, i}
             <span>
-              <Link to={id} on:click={isActive2}>{name}</Link>
+              <Link to={id} on:click={isActive2}><button>{name}</button></Link>
+              <!-- <Link to={id} on:click={reply_click}>{name}</Link> -->
             </span>
           {/each}
         </div>
       {/if}
 
-      <!-- <Route path="submenu" component= {SubMenu} /> -->
-      <!-- <SubMenu/> -->
-
-      {#if active2}
+      <!--
+				on:focus on:mouseover 구문 in: animation 안먹힘. 
+				out: animarion 정상동작
+				on:mouseover 사용시 lifecycle 또는 Delay 적용 필요.
+			  -->
+      {#if active && active2}
         <div class="mMainMenu">
           {#each InfoTech as { id, name }, i}
-            <!--
-                on:focus on:mouseover 구문 in: animation 안먹힘. 
-                out: animarion 정상동작
-                
-                on:mouseover 사용시 lifecycle 또는 Delay 적용 필요.
-
-              -->
-            <span class="mMainMenuFold" transition:slide={{ duration: 1000 }}>
-              <Link to={id} on:click={isActive3}>{name}</Link>
+            <span class="mMainMenuFold" transition:slide>
+              <Link to={id} on:click={isActive3}><button>{name}</button></Link>
             </span>
           {/each}
         </div>
       {/if}
 
-      {#if active3}
+      {#if active && active3}
         <div class="mMainMenu">
           {#each codeName as { id, name }, i}
-            <span class="mMainMenuFold" transition:slide={{ duration: 1000 }}>
-              <Link to={id}>{name}</Link>
+            <span class="mMainMenuFold" transition:slide>
+              <Link to={id}><button>{name}</button></Link>
             </span>
           {/each}
         </div>
       {/if}
     </div>
 
-    <div id="mMenuFoldButt">
+    <div>
       {#if active}
-        <button on:click={isActive}>-</button>
+        <button class="mMenuFoldButt" on:click={isActive}>-</button>
       {:else}
-        <button on:click={isActive}>+</button>
+        <button class="mMenuFoldButt" on:click={isActive}>+</button>
       {/if}
     </div>
   </div>
@@ -172,10 +170,10 @@
     padding: 0.2em;
   }
 
-  #mMenuFoldButt {
+  .mMenuFoldButt {
     border: 1px solid red;
-    margin: 0.1em;
-    font-size: 1.5vmin;
+    /* margin: 0.1em; */
+    font-size: 3vmin;
   }
 
   div {
@@ -183,14 +181,8 @@
   }
 
   span {
-    border: 1px solid lawngreen;
-
     max-width: 1280px;
     width: 100%;
     margin: 0.1em;
-  }
-
-  span:hover {
-    background-color: aqua;
   }
 </style>

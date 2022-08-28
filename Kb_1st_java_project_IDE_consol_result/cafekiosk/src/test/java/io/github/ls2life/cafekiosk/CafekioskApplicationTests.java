@@ -1,0 +1,13 @@
+package io.github.ls2life.cafekiosk;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class CafekioskApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
