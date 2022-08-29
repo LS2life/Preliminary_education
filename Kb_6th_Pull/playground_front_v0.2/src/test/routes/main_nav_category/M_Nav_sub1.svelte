@@ -2,28 +2,26 @@
   import { Link, Router, Route } from "svelte-routing";
   import { fly, scale, crossfade, fade, blur, slide } from "svelte/transition";
   export let url = "";
-  export let fold;
-  export let id;
-  export let name;
 
-  let active = false;
-  const isActive = () => {
-    active = !active;
-  };
+  let InfoTech = [
+    { id: 'codeName', name: "CodeName" },
+    { id: 'framework', name: "Framework" },
+    { id: 'dbms', name: "DBMS" },
+    { id: 'vc', name: "VC" },
+    { id: 'os', name: "OS" },
+    { id: 'etc', name: "Etc." },
+  ];
 </script>
 
-<!-- 이렇게는 왜 안될까? -->
 
 <Router {url}>
-  {#if active}
     <div class="mMainMenu">
-      {#each { fold } as { id, name }, i}
+      {#each InfoTech as { id, name }, i}
         <span class="mMainMenuFold" transition:slide={{ duration: 1000 }}>
           <Link to={id} on:click={isActive}>{name}</Link>
         </span>
       {/each}
     </div>
-  {/if}
 </Router>
 
 <style>

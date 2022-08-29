@@ -69,14 +69,6 @@
 
   let etC = [{ id: "etC", name: "etC" }];
 
-  let mNavCategory = [
-    { id: "infotech", name: "InfoTech" },
-    { id: "cosmos", name: "Cosmos" },
-    { id: "engineering", name: "Engineering" },
-    { id: "language", name: "Language" },
-    { id: "scific", name: "SciFic" },
-    { id: "etc", name: "etC." },
-  ];
 
   let active = false;
   let active2 = false;
