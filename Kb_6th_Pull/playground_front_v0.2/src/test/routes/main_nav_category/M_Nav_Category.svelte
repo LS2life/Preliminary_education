@@ -69,6 +69,14 @@
 
   let etC = [{ id: "etC", name: "etC" }];
 
+  let mNavCategory = [
+        { id: "infotech", name: "InfoTech" },
+        { id: "cosmos", name: "Cosmos" },
+        { id: "engineering", name: "Engineering" },
+        { id: "language", name: "Language" },
+        { id: "scific", name: "SciFic" },
+        { id: "etc", name: "etC." },
+    ];
 
   let active = false;
   let active2 = false;
@@ -109,7 +117,6 @@
           {#each mNavCategory as { id, name }, i}
             <span>
               <Link to={id} on:click={isActive2}><button>{name}</button></Link>
-              <!-- <Link to={id} on:click={reply_click}>{name}</Link> -->
             </span>
           {/each}
         </div>
@@ -120,15 +127,14 @@
 				out: animarion 정상동작
 				on:mouseover 사용시 lifecycle 또는 Delay 적용 필요.
 			  -->
-      {#if active && active2}
         <div class="mMainMenu">
           {#each InfoTech as { id, name }, i}
             <span class="mMainMenuFold" transition:slide>
-              <Link to={id} on:click={isActive3}><button>{name}</button></Link>
+              <!-- <Link to={id} on:click={isActive3}><button>{name}</button></Link> -->
+              <!-- <Route path={id} component:{name} /> -->
             </span>
           {/each}
         </div>
-      {/if}
 
       {#if active && active3}
         <div class="mMainMenu">
