@@ -13,3 +13,9 @@
 - DI - 의존성 주입 - 자동
 <br>
 
+## 폴더 구성
+
+- src : java source file or XML 등의 설정파일 위치.
+- lib : spring 의존 모듈을 포함한 jar file 위치.
+- WebContent :
+    - WEB-INF : web.xml file 위치.

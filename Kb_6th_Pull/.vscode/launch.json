@@ -9,6 +9,16 @@
             "projectName": "playground",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PracticeApplication<practice>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "io.github.ls2life.practice.PracticeApplication",
+            "projectName": "practice",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
