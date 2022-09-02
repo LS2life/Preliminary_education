@@ -1,6 +1,0 @@
-# Svelte Docs
-
-<br>
-
-## Script
-
