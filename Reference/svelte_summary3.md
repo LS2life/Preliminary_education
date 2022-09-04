@@ -2,26 +2,35 @@
 
 ## Tutorial
 
+<br />
+
 ## Bindings :입력값의 실시간 반영
 
-## 1. Text inputs
+<hr>
+<br />
 
-- 텍스트값 
+> ## 1. Text inputs
+
+-   일반적으로 Svelte의 데이터 흐름은 하향식입니다.
+-   상위 구성 요소는 하위 구성 요소에 props를 설정할 수 있고 구성 요소는 요소에 속성을 설정할 수 있지만 그 반대는 아닙니다.
+-   가끔은 그 규칙을 깨는 것이 유용합니다.
+-   `<input>` 요소의 경우를 보자면 `name` 값을 event.target.value로 설정하는 on:input 이벤트 핸들러를 추가할 수 있지만 약간... 상용구입니다. 우리가 보게 되겠지만, 다른 양식 요소에서는 더욱 악화됩니다.
 
 ```javascript
 <script>
 	let name = 'world';
 </script>
 
-<input bind:value={name}>
+<input value={name}> --> <input bind:value={name}>
 
 <h1>Hello {name}!</h1>
 ```
+
 <br>
 
-## 2. Numeric inputs
+> ## 2. Numeric inputs
 
--  bind: 을 붙이면 끝
+-   bind: 을 붙이면 끝
 
 ```javascript
 <script>
@@ -41,7 +50,7 @@
 </style>
 ```
 
-## 3. Checkbox inputs
+> ## 3. Checkbox inputs
 
 ```javascript
 <script>
@@ -63,9 +72,10 @@
 	Subscribe
 </button>
 ```
+
 <br>
 
-## 4. Group inputs
+> ## 4. Group inputs
 
 ```javascript
 <script>
@@ -121,14 +131,15 @@
 	</p>
 {/if}
 ```
+
 <br />
 
-## 5. Textarea inputs
+> ## 5. Textarea inputs
 
 ```html
 <script>
-	import { marked } from 'marked';
-	let value = `Some words are *italic*, some are **bold**`;
+    import { marked } from "marked";
+    let value = `Some words are *italic*, some are **bold**`;
 </script>
 
 {@html marked(value)}
@@ -136,16 +147,20 @@
 <textarea bind:value></textarea>
 
 <style>
-	textarea { width: 100%; height: 200px; }
+    textarea {
+        width: 100%;
+        height: 200px;
+    }
 </style>
 ```
 
+> ## 6. File inputs
 
-## 6. File inputs 
+<br/>
 
-## 7. Select bindings
+> ## 7. Select bindings
 
-- 비밀번호 찾기 힌트와 비슷.
+-   비밀번호 찾기 힌트와 비슷.
 
 ```javascript
 <script>
@@ -193,9 +208,9 @@
 </style>
 ```
 
-## 8. Select multiple
+> ## 8. Select multiple
 
-- 다중선택
+-   다중선택
 
 ```javascript
 <script>
@@ -252,7 +267,9 @@
 	</p>
 {/if}
 ```
-- 즉석 콘텐츠 편집 
+
+-   즉석 콘텐츠 편집
+
 ```javascript
 <script>
 	let html = '<p>Write some text!</p>';
@@ -274,9 +291,9 @@
 </style>
 ```
 
-## 9. Each block bindings
+> ## 9. Each block bindings
 
-- 블록의 속성 즉시 편집.
+-   블록의 속성 즉시 편집.
 
 ```javascript
 <script>
@@ -330,11 +347,13 @@
 </style>
 ```
 
-## 10. Media elements
+> ## 10. Media elements
 
-## 11. Dimensions
+<br/>
 
-- 텍스트 및 지정한 요소의 크기 변경.
+> ## 11. Dimensions
+
+-   텍스트 및 지정한 요소의 크기 변경.
 
 ```javascript
 <script>
@@ -360,7 +379,7 @@
 </style>
 ```
 
-## 12. bind:this={canvas}
+> ## 12. bind:this={canvas}
 
 ```javascript
 <script>
@@ -418,4 +437,4 @@
 </style>
 ```
 
-## 13. Component bindings
+> ## 13. Component bindings

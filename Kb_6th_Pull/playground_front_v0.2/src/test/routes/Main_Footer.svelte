@@ -1,16 +1,17 @@
 <footer readonly>
     <address>
-
-    <!-- Todo E-mail 연결 할 것 -->
+        <!-- Todo E-mail 연결 할 것 -->
         <a href="ls2wist@gmail.com">E-mail</a>
         <a href="https://github.com/LS2life">GitHub </a>
-        <br>
+        <br />
     </address>
-    <small >Copyrightⓒ2022 Dev.E_San All rights reserved.</small>
+    <small>Copyrightⓒ2022 Dev.E_San All rights reserved.</small>
 </footer>
 
 <style>
     footer {
+        font-size: 2vmin;
+
         text-align: left;
         border-top: 1px solid grey;
         padding-top: 20px;

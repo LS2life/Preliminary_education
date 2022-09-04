@@ -1,20 +1,12 @@
 <script>
-    import { Link, Router } from "svelte-routing";
+    import { Link, Router, Route } from "svelte-routing";
     import { fly, slide } from "svelte/transition";
+    import InfoTech from "./M_Nav_Infotech.svelte";
+    import Language from "./M_Nav_Language.svelte";
 
     export let url = "";
 
     // pass는 pipe 없음
-    let codeName = [
-        { id: "java", name: "Java" },
-        { id: "javaScript", name: "JavaScript" },
-        { id: "python", name: "Python" },
-        { id: "ubuntu", name: "Ubuntu" },
-        { id: "markdown", name: "Markdown" },
-        { id: "html5", name: "Html5" },
-        { id: "CSS3", name: "CSS3" },
-        { id: "about", name: "About" },
-    ];
 
     let framework = [
         { id: "svelte", name: "Svelte" },
@@ -44,65 +36,19 @@
         // { id:'', name:''},
     ];
 
-    let InfoTech = [
-        { id: codeName, name: "CodeName" },
-        { id: framework, name: "Framework" },
-        { id: dbms, name: "DBMS" },
-        { id: vc, name: "VC" },
-        { id: os, name: "OS" },
-        { id: F_etc, name: "Etc." },
-    ];
-
     let Cosmos = [{ id: "cosmos", name: "Cosmos" }];
 
     let engineering = [{ id: "engineering", name: "Engineering" }];
-
-    let Language = [
-        { id: "usenglish", name: "USEnglish" },
-        { id: "dasdeutsche", name: "Deutsche" },
-        { id: "espanol", name: "Espanol" },
-        { id: "francais", name: "Francais" },
-        { id: "pyccknn", name: "Pyccknn" },
-    ];
 
     let SciFic = [{ id: "ironman", name: "Ironman" }];
 
     let etC = [{ id: "etC", name: "etC" }];
 
-    let mNavCategory = [
-        { id: "infotech", name: "InfoTech" },
-        { id: "cosmos", name: "Cosmos" },
-        { id: "engineering", name: "Engineering" },
-        { id: "language", name: "Language" },
-        { id: "scific", name: "SciFic" },
-        { id: "etc", name: "etC." },
-    ];
-
     let active = false;
-    let active2 = false;
-    let active3 = false;
 
-    const isActive = () => {
+    let isActive = () => {
         active = !active;
     };
-    const isActive2 = () => {
-        active2 = !active2;
-    };
-    const isActive3 = () => {
-        active3 = !active3;
-    };
-
-    function sda() {
-        if (active && active2) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    function reply_click(id) {
-        this.id = id;
-        alert(id);
-    }
 </script>
 
 <!-- 
@@ -110,41 +56,76 @@
 -->
 
 <Router {url}>
-    <div class="mMenuContainer">
-        <div class="mMenuList">
-            {#if active}
-                <div
-                    class="mMainMenu"
-                    transition:fly={{ duration: 700, x: 200 }}
-                >
-                    {#each mNavCategory as { id, name }, i}
-                        <span>
-                            <button>
-                                <Link to={id} on:click={isActive2}>{name}</Link>
-                            </button>
-                        </span>
-                    {/each}
-                </div>
-            {/if}
+    <div>
+        {#if active}
+            <div transition:fly={{ duration: 700, x: 200 }}>
+                <button>
+                    <Link to="infotech">InfoTech</Link>
+                </button>
+                <button>
+                    <Link to="cosmos">Cosmos</Link>
+                </button>
+                <button>
+                    <Link to="engineering">Engineering</Link>
+                </button>
+                <button>
+                    <Link to="language">Language</Link>
+                </button>
+                <button>
+                    <Link to="scific">SciFic</Link>
+                </button>
+                <button>
+                    <Link to="etc">etC</Link>
+                </button>
+            </div>
+        {/if}
 
-            <!--
+        <div>
+            {#if active}
+                <button on:click={isActive}>-</button>
+            {:else}
+                <button on:click={isActive}>+</button>
+            {/if}
+        </div>
+    </div>
+
+    <div transition:fly={{ duration: 700, x: 200 }}>
+        <Route path="infotech" component={InfoTech} />
+        <Route path="language" component={Language} />
+    </div>
+    <!-- <div transition:fly={{ duration: 700, x: 200 }}>
+        <Route path="codename" component={CodeName} />
+        <Route path="language" component={Language} />
+    </div> -->
+</Router>
+
+<!-- {#each mNavCategory as { id, name }, i}
+                    <span>
+                        <button>
+                            <Link to={id} on:click={isActive2}>{name}</Link>
+                        </button>
+                    </span>
+                {/each} -->
+<!--
 				on:focus on:mouseover 구문 in: animation 안먹힘. 
 				out: animarion 정상동작
 				on:mouseover 사용시 lifecycle 또는 Delay 적용 필요.
 			  -->
-            <div class="mMainMenu">
+
+<!--
+            <div>
                 {#each InfoTech as { id, name }, i}
-                    <span class="mMainMenuFold" transition:slide>
-                        <!-- <Link to={id} on:click={isActive3}><button>{name}</button></Link> -->
-                        <!-- <Route path={id} component:{name} /> -->
+                    <span transition:slide>
+                        <Link to={id} on:click={isActive3}><button>{name}</button></Link>
+                        <Route path={id} component:{name} />
                     </span>
                 {/each}
             </div>
 
             {#if active && active3}
-                <div class="mMainMenu">
+                <div>
                     {#each codeName as { id, name }, i}
-                        <span class="mMainMenuFold" transition:slide>
+                        <span transition:slide>
                             <Link to={id}><button>{name}</button></Link>
                         </span>
                     {/each}
@@ -152,40 +133,52 @@
             {/if}
         </div>
 
-        <div>
-            {#if active}
-                <button class="mMenuFoldButt" on:click={isActive}>-</button>
-            {:else}
-                <button class="mMenuFoldButt" on:click={isActive}>+</button>
-            {/if}
-        </div>
-    </div>
-</Router>
-
+-->
 <style>
-    .mMenuContainer {
-        display: flex;
-        justify-content: end;
-    }
-
-    .mMainMenu {
-        font-size: 2.5vmin;
-        padding: 0.2em;
-    }
-
-    .mMenuFoldButt {
-        border: 1px solid red;
-        /* margin: 0.1em; */
-        font-size: 3vmin;
-    }
-
     div {
         border: 1px solid lawngreen;
+
+        display: flex;
+        justify-content: end;
+        padding: 0.2em;
+        margin: 0.1em;
     }
 
     span {
         max-width: 1280px;
         width: 100%;
         margin: 0.1em;
+    }
+    button {
+        font-family: "Noto Sans KR", sans-serif;
+        border: none;
+        color: #000;
+        font-size: 2.5vmin;
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+    button:after {
+        position: absolute;
+        content: text;
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        direction: rtl;
+        z-index: -1;
+        box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+            7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+        transition: all 0.3s ease;
+    }
+    button:hover {
+        color: #000;
+    }
+    button:hover:after {
+        left: auto;
+        right: 0;
+        width: 100%;
+    }
+    button:active {
+        top: 2px;
     }
 </style>
