@@ -25,12 +25,4 @@
 </div>
 
 <style>
-    button {
-        font-family: "Noto Sans KR", sans-serif;
-        border: none;
-        color: #000;
-        font-size: 2.5vmin;
-        margin-left: 0.2em;
-        margin-right: 0.2em;
-    }
 </style>

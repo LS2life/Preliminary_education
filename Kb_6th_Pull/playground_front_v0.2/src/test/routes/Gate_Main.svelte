@@ -62,43 +62,4 @@
 <Footer />
 
 <style>
-    :root {
-        border: 1px solid red;
-
-        color-scheme: light Dark;
-        color: rgba(255, 255, 255, 0.87);
-        background-color: #242424;
-
-        font-synthesis: none;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-text-size-adjust: 100%;
-
-        line-height: 24px;
-        font-weight: 400;
-        min-width: 320px;
-        min-height: 100vh;
-        display: flex;
-        place-items: center;
-
-        margin: 0 auto;
-        padding: 2rem;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    @media all and (prefers-color-scheme: light) {
-        :root {
-            color: #213547;
-            background-color: #ffffff;
-        }
-    }
-    @media all and (prefers-color-scheme: dark) {
-        :root {
-            color: #ffffff;
-            background-color: #213547;
-        }
-    }
 </style>

@@ -149,36 +149,4 @@
         width: 100%;
         margin: 0.1em;
     }
-    button {
-        font-family: "Noto Sans KR", sans-serif;
-        border: none;
-        color: #000;
-        font-size: 2.5vmin;
-        margin-left: 0.2em;
-        margin-right: 0.2em;
-    }
-    button:after {
-        position: absolute;
-        content: text;
-        width: 0;
-        height: 100%;
-        top: 0;
-        left: 0;
-        direction: rtl;
-        z-index: -1;
-        box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
-            7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
-        transition: all 0.3s ease;
-    }
-    button:hover {
-        color: #000;
-    }
-    button:hover:after {
-        left: auto;
-        right: 0;
-        width: 100%;
-    }
-    button:active {
-        top: 2px;
-    }
 </style>
