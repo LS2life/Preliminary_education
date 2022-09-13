@@ -1,14 +1,28 @@
 {
-  "configurations": [
-    {
-      "type": "java",
-      "name": "Spring Boot-CafekioskApplication<cafekiosk>",
-      "request": "launch",
-      "cwd": "${workspaceFolder}",
-      "mainClass": "io.github.ls2life.cafekiosk.CafekioskApplication",
-      "projectName": "cafekiosk",
-      "args": "",
-      "envFile": "${workspaceFolder}/.env"
-    }
-  ]
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch CafeManager",
+            "request": "launch",
+            "mainClass": "io.github.ls2life.app.CafeManager",
+            "projectName": "cafekiosk"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CafekioskApplication<cafekiosk>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "io.github.ls2life.cafekiosk.CafekioskApplication",
+            "projectName": "cafekiosk",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
 }
