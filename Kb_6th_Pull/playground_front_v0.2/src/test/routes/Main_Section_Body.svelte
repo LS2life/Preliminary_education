@@ -70,7 +70,4 @@
 <Reply />	
 
 <style>
-  section {
-    border: 3px solid pink;
-  }
 </style>

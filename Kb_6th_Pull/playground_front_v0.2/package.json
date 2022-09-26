@@ -14,6 +14,7 @@
     "vite": "^3.0.6"
   },
   "dependencies": {
+    "app-store": "^2.23.0",
     "markdown": "^0.5.0",
     "marked": "^4.0.19",
     "svelte-markdown": "^0.2.3",
