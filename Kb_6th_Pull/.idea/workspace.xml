@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1956033a-ee15-46e6-8ecf-c7a7e06008ea" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/../Python/jupyter_test5.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/jupyter_test5.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="1956033a-ee15-46e6-8ecf-c7a7e06008ea" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +35,7 @@
       <updated>1662518962241</updated>
       <workItem from="1662518964715" duration="112000" />
       <workItem from="1662519083502" duration="4000" />
+      <workItem from="1664332111149" duration="15000" />
     </task>
     <servers />
   </component>
