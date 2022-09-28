@@ -18,7 +18,9 @@
 
 body {
 	min-height: 100vh;
-	margin: 0;
+	margin: 0 auto;
+    text-align: center;
+    transition: all 1s;
 	background-color: var(--primary-color);
 	background: linear-gradient(
 		180deg,
@@ -92,16 +94,49 @@ pre {
 
 input,
 button {
-	font-size: inherit;
+	font-family: inherit, "Noto Sans KR", sans-serif;
+	font-size: 2.5vmin;
+	font-weight: 500;
 	font-family: inherit;
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	/* padding: 0.6em 1em; */
+	color: #302e2e;
+	background-color: #1a1a1a;
+	cursor: pointer;
+	transition: border-color 0.25s;
 }
 
 button:focus:not(:focus-visible) {
 	outline: none;
+}
+button:hover {
+	border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (min-width: 720px) {
 	h1 {
 		font-size: 2.4rem;
 	}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+
+	a:hover {
+		color: #747bff;
+	}
+
+	button {
+		background-color: #d6d6d6;
+	}
+}
 }
