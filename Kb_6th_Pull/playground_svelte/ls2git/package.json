@@ -1,0 +1,25 @@
+{
+  "homepage": "https://ls2life.github.io/ls2git",
+  "name": "ls2git",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dp": "npm run build && node ./gh-pages.js "
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.2",
+    "gh-pages": "^4.0.0",
+    "svelte": "^3.49.0",
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "@sveltejs/adapter-static": "^1.0.0-next.43",
+    "marked": "^4.1.0",
+    "svelte-markdown": "^0.2.3",
+    "svelte-routing": "^1.6.0"
+  }
+}

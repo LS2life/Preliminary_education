@@ -1,6 +1,6 @@
 <script>
   import {Link} from "svelte-routing"
-  import GateWay from "./GateWay.svelte";
+  import GateWay from "./blog/GateWay.svelte";
   import Vitelogo from "../../public/vite.svg";
   import Sveltelogo from "../assets/svelte.svg";
   import GitHublogo from "../assets/git_spaider.png"

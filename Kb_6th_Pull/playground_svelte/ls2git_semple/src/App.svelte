@@ -1,6 +1,6 @@
 <script>
   import Wellcome from "./routes/Wellcome.svelte";
-  import GateWay from "./routes/GateWay.svelte";
+  import GateWay from "./routes/blog/GateWay.svelte";
 </script>
 
 <Wellcome />

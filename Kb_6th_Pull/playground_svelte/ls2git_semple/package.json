@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "npx gh-pages -d build"
+    "dp": "npx gh-pages -d dist"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.43",
