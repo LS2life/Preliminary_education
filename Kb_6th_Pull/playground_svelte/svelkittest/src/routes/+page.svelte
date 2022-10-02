@@ -1,19 +1,19 @@
 <script>
-	// import {Link} from "svelte-routing"
+  import {page} from '$app/stores'
 	// import GateWay from "./blog/GateWay.svelte";
   import Header from '../lib/Header.svelte';
   import Footer from "../lib/Footer.svelte";
+
   import '../styles.css';
-	import {page} from '$app/stores'
 	import Vitelogo from "../assets/vite.svg";
 	import Sveltelogo from "../assets/svelte.svg";
 	import GitHublogo from "../assets/git_spaider.png"
 	import GitBloglogo from "../assets/alphabet_B.svg"
+
 	let url = ""
 </script>
 
 <div class="app">
-  <Header />
 
   <main>
     <div class="config">
@@ -26,25 +26,26 @@
       <h3>Made by</h3><h1>Vite + Svelte</h1>
     </div>
     <div>
-      <ul>
-        <li>
-          <a href ="https://github.com/LS2life" target="_blank">
-            <img src={GitHublogo} class="logo github" alt="GitHub Logo" title="GitHub" />
-          </a>
-        </li>
-        <li class:active={$page.url.pathname === '/about' } >
-          <!--		<a href ="https://ls2life.github.io/ls2git/blog/GateWay" target="_self">-->
-          <a href="/about">
-            <img  src={GitBloglogo} class="logo gitblog" alt="GitHub Blog Logo" title="Github Blog">
-          </a>
-        </li>
-      </ul>
+        <a href ="https://github.com/LS2life" target="_blank">
+          <img src={GitHublogo} class="logo github" alt="GitHub Logo" title="GitHub" />
+        </a>
+        <a class:active={$page.url.pathname === '/about' } href="/about">
+          <img  src={GitBloglogo} class="logo gitblog" alt="GitHub Blog Logo"
+                title="Github Blog Svelte router">
+        </a>
     </div>
 
-    <p>
-      Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" >
-      SvelteKit</a>, the official Svelte app framework powered by Vite!
-    </p>
+    <div>
+      <p>
+      Check out
+      <a href="https://github.com/sveltejs/kit#readme" target="_blank" >
+      GitHub</a>,
+      <a href="https://ls2life.github.io/ls2git/blog" target="_self"
+         title="GitHub Blog href">
+      My Lap</a >!
+      and I love you 3000 !
+      </p>
+    </div>
   </main>
 
   <Footer />
@@ -68,9 +69,33 @@
     box-sizing: border-box;
   }
 
+  a {
+    color: var(--color-theme-1);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  h1,
+  p {
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+
 	.config {
 		border: 2px solid darkgray;
 		border-radius: 3em;
+    margin: 30px;
 
 	}
 	.logo.vite, .logo.svelte {

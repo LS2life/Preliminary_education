@@ -109,6 +109,14 @@
 		border-top: var(--size) solid var(--color-theme-1);
 	}
 
+  a {
+    color: var(--color-theme-1);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
 	nav a {
 		display: flex;
 		height: 100%;
@@ -121,9 +129,5 @@
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: color 0.2s linear;
-	}
-
-	a:hover {
-		color: var(--color-theme-1);
 	}
 </style>
