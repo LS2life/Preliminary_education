@@ -5,10 +5,10 @@
   import Footer from "../lib/Footer.svelte";
 
   import '../styles.css';
-	import Vitelogo from "../assets/vite.svg";
-	import Sveltelogo from "../assets/svelte.svg";
-	import GitHublogo from "../assets/git_spaider.png"
-	import GitBloglogo from "../assets/alphabet_B.svg"
+	import Vitelogo from "../lib/images/vite.svg";
+	import Sveltelogo from "../lib/images/svelte.svg";
+	import GitHublogo from "../lib/images/git_spaider.png"
+	import GitBloglogo from "../lib/images/alphabet_B.svg"
 
 	let url = ""
 </script>
@@ -29,7 +29,7 @@
         <a href ="https://github.com/LS2life" target="_blank">
           <img src={GitHublogo} class="logo github" alt="GitHub Logo" title="GitHub" />
         </a>
-        <a class:active={$page.url.pathname === '/about' } href="/about">
+        <a class:active={$page.url.pathname === '/blog' } href="/blog">
           <img  src={GitBloglogo} class="logo gitblog" alt="GitHub Blog Logo"
                 title="Github Blog Svelte router">
         </a>

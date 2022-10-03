@@ -1,16 +1,17 @@
 <script>
-  import Header from "./Main_Header.svelte";
 
-  import Navigations from "./Main_Navigitions.svelte";
+  import Header from "../../lib/Header.svelte";
+  import Navigations from "../../lib/Navigitions.svelte";
+  import Footer from "../../lib/Footer.svelte";
+
   // import M_Nav_Category from "./main_nav_category/M_Nav_Category.svelte";
 
   // import Aside from "./Main_Aside.svelte";
-
-  import Section from "./Main_Section.svelte";
+  //
+  // import Section from "./Main_Section.svelte";
   // import Main_Section_Body from "./Main_Section_Body.svelte";
   // import Main_Section_Header from "./Main_Section_Header.svelte";
-
-  import Footer from "./Main_Footer.svelte";
+  //
   // import MNavSub1 from "./main_nav_category/M_Nav_sub1.svelte";
 </script>
 
@@ -51,7 +52,7 @@
 
 <!--// <Aside /> -->
 
-<Section />
+<!--<Section />-->
 <!-- <Main_Section_Header /> -->
 <!-- <Main_Section_Body /> -->
 

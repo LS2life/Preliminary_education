@@ -114,7 +114,7 @@
 
 <!--
             <div>
-                {#each InfoTech as { id, name }, i}
+                {#each infotech as { id, name }, i}
                     <span transition:slide>
                         <Link to={id} on:click={isActive3}><button>{name}</button></Link>
                         <Route path={id} component:{name} />
