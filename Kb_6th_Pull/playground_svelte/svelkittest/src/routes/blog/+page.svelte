@@ -2,6 +2,7 @@
 
   import Header from "../../lib/Header.svelte";
   import Navigations from "../../lib/Navigitions.svelte";
+  import SectionBody from "../../lib/Section_body.svelte"
   import Footer from "../../lib/Footer.svelte";
 
   // import M_Nav_Category from "./main_nav_category/M_Nav_Category.svelte";
@@ -52,9 +53,8 @@
 
 <!--// <Aside /> -->
 
-<!--<Section />-->
 <!-- <Main_Section_Header /> -->
-<!-- <Main_Section_Body /> -->
+<SectionBody />
 
 <Footer />
 

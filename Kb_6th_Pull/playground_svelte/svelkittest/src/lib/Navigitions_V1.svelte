@@ -3,28 +3,12 @@
   import Home from '$lib/images/git_spaider.svg';
   import github from '$lib/images/github.svg';
 
+  // let activeInfoTech = false;
+  // let isActiveInfoTech = () => { activeInfoTech = !activeInfoTech }
   function onName() {
     console.log("console: " + $page.url.pathname)
   }
-
   let base = '/blog';
-
-  $: blog = [
-    { id: 'infotech',     name: infotech },
-    { id: 'cosmos',       name: base+'/cosmos'},
-    { id: 'enginnering',  name: base+'/enginnering'},
-    { id: 'language',     name: base+'/language'},
-    { id: 'scific',       name: base+'/scific'},
-    { id: 'etc',          name: base+'/etc'},
-  ]
-
-  let infotech = [
-    { id: 'codename'},
-    { id: 'dbms'},
-    { id: 'framework'},
-    { id: 'os'},
-    { id: 'vc'},
-  ]
 </script>
 
 <nav>
@@ -39,11 +23,26 @@
       <path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
     </svg>
     <ul>
-      {#each blog as {id, name}, i}
-      <li class:active={$page.url.pathname === {name}}>
-        <a href={name}>{id}</a>
+<!--/base를 변수선언으로 url주소값 변경은 간단하지만.. 쓸데없이 중복인 것같다.-->
+      <li on:mousedown={onName()} class:active={$page.url.pathname ===
+      '{base}/infotech'}>
+        <a href="{base}/infotech">InfoTech</a>
       </li>
-      {/each}
+      <li class:active={$page.url.pathname === '{base}/cosmos'}>
+        <a href="{base}/cosmos">Cosmos</a>
+      </li>
+      <li class:active={$page.url.pathname === '{base}/engineering'}>
+        <a href="{base}/engineering">Engineering</a>
+      </li>
+      <li class:active={$page.url.pathname === '{base}/language'}>
+        <a href="{base}/language">Language</a>
+      </li>
+      <li class:active={$page.url.pathname === '{base}/scific'}>
+        <a href="{base}/scific">SciFic</a>
+      </li>
+      <li class:active={$page.url.pathname === '/etc'}>
+        <a href="/etc">etC</a>
+      </li>
     </ul>
     <svg viewBox="0 0 2 3" aria-hidden="true">
       <path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />

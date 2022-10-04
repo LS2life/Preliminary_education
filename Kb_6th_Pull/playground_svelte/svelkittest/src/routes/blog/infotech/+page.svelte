@@ -1,38 +1,26 @@
-<script >
-import { page } from '$app/stores'
-</script >
+<svelte:head>
+  <title>About</title>
+  <meta name="description" content="About this app" />
+</svelte:head>
 
-<nav>
-<!--  <svg viewBox="0 0 2 3" aria-hidden="true">-->
-<!--    <path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />-->
-<!--  </svg>-->
-  <div class:active={$page.url.pathname.startsWith('/infotech')}>
-    <ul>
-      <li class:active={$page.url.pathname.startsWith('/infotech')}>
-        <a href="/infotech">InfoTech</a>
-      </li>
-      <li class:active={$page.url.pathname === '/cosmos'}>
-        <a href="/cosmos">Cosmos</a>
-      </li>
-      <li class:active={$page.url.pathname === '/engineering'}>
-        <a href="/engineering">Engineering</a>
-      </li>
-      <li class:active={$page.url.pathname === '/language'}>
-        <a href="/language">Language</a>
-      </li>
-      <li class:active={$page.url.pathname === '/scific'}>
-        <a href="/scific">SciFic</a>
-      </li>
-      <li class:active={$page.url.pathname === '/etc'}>
-        <a href="/etc">etC</a>
-      </li>
-    </ul>
-  </div>
-<!--  <svg viewBox="0 0 2 3" aria-hidden="true">-->
-<!--    <path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />-->
-<!--  </svg>-->
-</nav>
+<div class="text-column">
+  <h1>About this app</h1>
 
-<style >
+  <p>
+    This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
+    following into your command line and following the prompts:
+  </p>
 
-</style >
+  <pre>npm create svelte@latest</pre>
+
+  <p>
+    The page you're looking at is purely static HTML, with no client-side interactivity needed.
+    Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
+    the devtools network panel and reloading.
+  </p>
+
+  <p>
+    The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
+    using it with JavaScript disabled!
+  </p>
+</div>

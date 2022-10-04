@@ -17,22 +17,22 @@
 
   <main>
     <div class="config">
-      <a href="https://vitejs.dev" target="_blank">
-        <img src={Vitelogo} class="logo vite" alt="Vite Logo" title="Vite" />
-      </a>
-      <a href="https://svelte.dev" target="_blank">
-        <img src={Sveltelogo} class="logo svelte" alt="Svelte Logo" title="Svelte" />
-      </a>
-      <h3>Made by</h3><h1>Vite + Svelte</h1>
+		<a href="https://vitejs.dev" target="_blank">
+			<img src={Vitelogo} class="logo vite" alt="Vite Logo" title="Vite" />
+		</a>
+		<a href="https://svelte.dev" target="_blank">
+		<img src={Sveltelogo} class="logo svelte" alt="Svelte Logo" title="Svelte" />
+		</a>
+		<h3>Made by</h3><h1>Vite + Svelte</h1>
     </div>
     <div>
-        <a href ="https://github.com/LS2life" target="_blank">
-          <img src={GitHublogo} class="logo github" alt="GitHub Logo" title="GitHub" />
-        </a>
-        <a class:active={$page.url.pathname === '/blog' } href="/blog">
-          <img  src={GitBloglogo} class="logo gitblog" alt="GitHub Blog Logo"
-                title="Github Blog Svelte router">
-        </a>
+		<a href ="https://github.com/LS2life" target="_blank">
+		  <img src={GitHublogo} class="logo github" alt="GitHub Logo" title="GitHub" />
+		</a>
+		<a class:active={$page.url.pathname === '/blog' } href="/blog">
+		  <img  src={GitBloglogo} class="logo gitblog" alt="GitHub Blog Logo"
+				title="Github Blog Svelte router">
+		</a>
     </div>
 
     <div>
