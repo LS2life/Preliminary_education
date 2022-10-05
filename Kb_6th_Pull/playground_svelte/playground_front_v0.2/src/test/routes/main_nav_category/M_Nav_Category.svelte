@@ -149,4 +149,7 @@
         width: 100%;
         margin: 0.1em;
     }
+    Link {
+	    text-transform: uppercase;
+    }
 </style>
