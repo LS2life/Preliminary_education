@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"svelte-markdown": "^0.2.3",
 		"svelte-routing": "^1.6.0"
 	}
 }

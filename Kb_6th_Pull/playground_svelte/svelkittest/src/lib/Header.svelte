@@ -13,7 +13,7 @@
     border: 1px solid orchid;
     display: flex;
     line-height: 40px;
-    place-items: center;
+	text-align: center;
   }
 
   spen {

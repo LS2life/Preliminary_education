@@ -4,9 +4,14 @@
 
 </script >
 
-<SHeader />
-<SBody />
+<section>
+	<SHeader />
+	<SBody />
+</section>
 
 <style >
+	section {
+		text-align: center;
+	}
 
 </style >

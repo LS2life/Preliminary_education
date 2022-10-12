@@ -1,5 +1,4 @@
 <script>
-	import { Link, Router } from "svelte-routing";
 	import { page } from '$app/stores';
 	import Home from '$lib/images/git_spaider.svg';
 	import github from '$lib/images/github.svg';
@@ -17,27 +16,26 @@
     <svg viewBox="0 0 2 3" aria-hidden="true">
       <path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
     </svg>
-	<Router {url}>
     <ul>
-	    <li class:active={$page.url.pathname === '/infotech'}>
-		    <a href='/infotech'>InfoTech</a>
+	    <li class:active={$page.url.pathname === '/blog/infotech'}>
+		    <a href='/blog/infotech'>InfoTech</a>
+<!--			<a href="/blog/infotech" class="link" use:Link></a>-->
+<!--			<Link to="infotech" style={{ textDecoration:'none' }}>InfoTech</Link>-->
 	    </li>
-	    <li class:active={$page.url.pathname === '/cosmos'}>
-<!--		    <a href='/cosmos'>Cosmos</a>-->
-<!--		    <a href="/blog/cosmos" class="link" use:Link></a>-->
-		    <Link to="cosmos" class="underline">Cosmos</Link>
+		<li class:active={$page.url.pathname === '/blog/cosmos'}>
+		    <a href='/blog/cosmos'>Cosmos</a>
 	    </li>
-	    <li class:active={$page.url.pathname === '/engineering'}>
-		    <a href='/engineering'>Engineering</a>
+		<li class:active={$page.url.pathname === '/blog/engineering'}>
+			<a href='/blog/engineering'>Engineering</a>
 	    </li>
-	    <li class:active={$page.url.pathname === '/language'}>
-		    <a href='/language'>Language</a>
+	    <li class:active={$page.url.pathname === '/blog/language'}>
+		    <a href='/blog/language'>Language</a>
 	    </li>
-	    <li class:active={$page.url.pathname === '/scific'}>
-		    <a href='/scific'>SciFic</a>
+		<li class:active={$page.url.pathname === '/blog/scific'}>
+			<a href="/blog/scific">SciFic</a>
 	    </li>
-	    <li class:active={$page.url.pathname === '/etc'}>
-		    <a href='/etc'>etC</a>
+		<li class:active={$page.url.pathname === '/blog/etc'}>
+		    <a href="/blog/etc">etC</a>
 	    </li>
 	    <!--
 			  {#each blog as {id, name}, i}
@@ -47,7 +45,6 @@
 			  {/each}
 		-->
     </ul>
-	</Router>
     <svg viewBox="0 0 2 3" aria-hidden="true">
       <path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
     </svg>
@@ -61,10 +58,6 @@
 </nav>
 
 <style>
-  /*header {*/
-  /*  display: flex;*/
-  /*}*/
-
   .corner {
     width: 3em;
     height: 3em;
@@ -79,8 +72,10 @@
   }
 
   .corner img {
-    width: 2em;
-    height: 2em;
+	border: 1px solid red;
+
+	width: 2.5em;
+    height: 2.5em;
     object-fit: contain;
   }
 
@@ -102,6 +97,8 @@
   }
 
   ul {
+	border: 1px solid red;
+
     position: relative;
     padding: 0;
     margin: 0;
@@ -115,8 +112,10 @@
   }
 
   li {
+	border: 1px solid red;
+
     position: relative;
-    height: 100%;
+	height: 100%;
   }
 
   li.active::before {
@@ -133,17 +132,12 @@
 
   a {
     color: var(--color-theme-1);
-    text-decoration: none;
+    text-decoration: inherit;
   }
   a:hover {
     text-decoration: underline;
   }
 
-  .Link > :global(a) {
-	text-transform: uppercase;
-	color: var(--color-text);
-	transition: color 0.2s linear;
-  }
   nav a {
     display: flex;
     height: 100%;
@@ -151,7 +145,7 @@
     padding: 0 0.5rem;
     color: var(--color-text);
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;

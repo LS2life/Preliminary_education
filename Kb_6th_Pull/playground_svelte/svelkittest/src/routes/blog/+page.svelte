@@ -1,12 +1,10 @@
 <script>
-
   import Header from "../../lib/Header.svelte";
   import Navigations from "../../lib/Navigitions.svelte";
-  import SectionBody from "../../lib/Section_body.svelte"
+  import Section from "../../lib/Section.svelte"
   import Footer from "../../lib/Footer.svelte";
 
   // import M_Nav_Category from "./main_nav_category/M_Nav_Category.svelte";
-
   // import Aside from "./Main_Aside.svelte";
   //
   // import Section from "./Main_Section.svelte";
@@ -34,28 +32,20 @@
 <!--
     * Sementic
     * 가능한 각 Tag의 하위범위내에서만 수정.
-
-    // Wellcome view
+    * Wellcome view
     * header
     * navigation
      // aside
     * section
          // section_header
-         // section bocy
+         // section body
     * footer
 -->
 
 <Header />
-
 <Navigations />
-<!-- <M_Nav_Category /> -->
-<!-- <MNavSub1 /> -->
-
 <!--// <Aside /> -->
-
-<!-- <Main_Section_Header /> -->
-<SectionBody />
-
+<Section/>
 <Footer />
 
 <style>
