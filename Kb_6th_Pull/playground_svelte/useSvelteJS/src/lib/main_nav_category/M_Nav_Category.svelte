@@ -143,4 +143,13 @@
         padding: 0.2em;
         margin: 0.1em;
     }
+
+    span {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0.1em;
+    }
+    Link {
+	    text-transform: uppercase;
+    }
 </style>

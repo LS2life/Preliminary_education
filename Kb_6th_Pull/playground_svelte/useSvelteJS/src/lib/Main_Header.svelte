@@ -16,6 +16,11 @@
         place-items: center;
     }
 
+    spen {
+        border: 1px solid red;
+        width: 100%;
+    }
+
     h1 {
         font-family: "East Sea Dokdo", cursive;
         font-size: 10vmin;

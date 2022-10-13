@@ -1,5 +1,6 @@
 <script>
     // import Wellcome from "../view/Wellcome.svelte";
+    import ModeChange from "./lightDark.svelte";
     import Header from "./Main_Header.svelte";
 
     import Navigations from "./Main_Navigitions.svelte";
@@ -45,6 +46,7 @@
 -->
 
 <!--// <Wellcome /> -->
+<ModeChange />
 <Header />
 
 <Navigations />
