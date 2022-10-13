@@ -1,14 +1,12 @@
 <script>
-  import {page} from '$app/stores'
-  import Footer from "../lib/Footer.svelte";
+	import {page} from '$app/stores'
+	import Footer from "../lib/Footer.svelte";
 
-  import '../styles.css';
+	import '../styles.css';
 	import Vitelogo from "../lib/images/vite.svg";
 	import Sveltelogo from "../lib/images/svelte.svg";
-	import GitHublogo from "../lib/images/git_spaider.png"
-	import GitBloglogo from "../lib/images/alphabet_B.svg"
-
-	let url = ""
+	import GitHublogo from "../lib/images/git_spider.svg";
+	import GitBloglogo from "../lib/images/alphabet_B.svg";
 </script>
 <!--
  *
@@ -36,7 +34,7 @@
 			<img src={Vitelogo} class="logo vite" alt="Vite Logo" title="Vite" />
 		</a>
 		<a href="https://svelte.dev" target="_blank">
-		<img src={Sveltelogo} class="logo svelte" alt="Svelte Logo" title="Svelte" />
+			<img src={Sveltelogo} class="logo svelte" alt="Svelte Logo" title="Svelte" />
 		</a>
 		<h3>Made by</h3><h1>Vite + Svelte</h1>
     </div>

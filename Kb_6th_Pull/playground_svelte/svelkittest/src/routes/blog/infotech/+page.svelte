@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>About</title>
+  <title>Infotech</title>
   <meta name="description" content="About this app" />
 </svelte:head>
 
@@ -20,7 +20,6 @@
   </p>
 
   <p>
-    The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
     using it with JavaScript disabled!
   </p>
 </div>
