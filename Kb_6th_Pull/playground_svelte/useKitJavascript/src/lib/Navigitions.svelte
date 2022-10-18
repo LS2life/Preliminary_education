@@ -1,5 +1,6 @@
 <script>
-  import NavMain from './navigitions_branch/Nav_Main.svelte'
+  import GNB_Nav from './gnb_navigitions/Gnb_Main.svelte'
 </script>
 
-<NavMain />
+<GNB_Nav />
+  <slot><!-- optional fallback --> </slot>

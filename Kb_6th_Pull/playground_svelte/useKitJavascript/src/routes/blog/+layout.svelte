@@ -14,10 +14,9 @@
  -->
 <svelte:head>
 	<link
-	href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=East+Sea+Dokdo&family=Hi+Melody&family=Noto+Sans+KR:wght@400&family=Stylish&display=swap"
+	href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=East+Sea+Dokdo&family=Hi+Melody&family=Noto+Serif+KR:wght@700&display=Stylish&display=Gothic+A1:100,700=swap"
 	rel="stylesheet"
 	/>
-	<title>Under repair Lab</title>
 </svelte:head>
 
 <!-- Use annotation of vscode plugin "Colorful Comments" -->
@@ -36,6 +35,6 @@
 
 <Header />
 <Navigations />
+<slot> <!-- optional fallback --></slot>
 <!--// <Aside /> -->
-<Section/>
 <Footer />

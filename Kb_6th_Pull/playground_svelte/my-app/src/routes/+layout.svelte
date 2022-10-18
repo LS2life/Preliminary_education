@@ -1,11 +1,3 @@
-<script>
-	import { page } from '$app/stores';
-	import Home from '../images/git_spider.svg';
-	import Github from '../images/github.svg';
-  import InfoTech from './Nav_Infotech.svelte'
-	let url=""
-</script>
-
 <nav>
   <div class="corner" class:active={$page.url.pathname ==='/'}>
     <a href="/">

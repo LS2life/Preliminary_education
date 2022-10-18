@@ -1,6 +1,3 @@
-<script >
-</script >
-
 <footer readonly>
   <address>
   <a href="email:ls2wist@gmail.com">E-mail</a>
@@ -9,13 +6,13 @@
   <small>Copyrightⓒ2022 Dev.E_San All rights reserved.</small>
 </footer>
 
-<style >
+<style>
   footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     /*align-items: center;*/
-    positoion: relative;
+    position: relative;
 
     margin: auto;
     text-align: left;
@@ -38,4 +35,4 @@
       padding: 20px 0;
     }
   }
-</style >
+</style>

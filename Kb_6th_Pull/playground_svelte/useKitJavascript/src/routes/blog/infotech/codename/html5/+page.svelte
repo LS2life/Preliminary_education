@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Html5</title>
+	<title>HTML5</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
 
