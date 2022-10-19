@@ -1,9 +1,10 @@
 <script>
 	import { page } from '$app/stores';
-	import { slide } from 'svelte/transition';
+	import { slide,fly } from 'svelte/transition';
 </script>
 
-<nav transition:slide>
+<!-- <nav transition:slide> -->
+<nav in:fly="{{ x: -100, duration: 500, delay: 500}}" out:fly="{{ x: 100}}">
 	<ul>
 		<li class:active={$page.url.pathname === '/blog/infotech/codename'}>
 			<a href='/blog/infotech/codename'>CodeName</a>
@@ -27,12 +28,10 @@
 	nav {
     display: flex;
     justify-content: center;
-    --background: rgba(255, 255, 255, 0.7);
+    --background: rgba(200, 200, 200, 0.7);
   }
 
   ul {
-	border: 1px solid red;
-
     position: relative;
     padding: 0;
     margin: 0;
@@ -46,10 +45,9 @@
   }
 
   li {
-	border: 1px solid red;
-
+    border: 1px solid teal;
     position: relative;
-	height: 100%;
+    height: 100%;
   }
 
   li.active::before {

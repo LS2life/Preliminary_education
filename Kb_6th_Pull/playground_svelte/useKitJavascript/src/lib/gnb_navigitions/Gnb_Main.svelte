@@ -72,16 +72,14 @@
   }
 
   .corner img {
-	border: 1px solid red;
-
-	width: 2.5em;
+    width: 2.5em;
     height: 2.5em;
     object-fit: contain;
   }
 
   nav {
     display: flex;
-    --background: rgba(255, 255, 255, 0.7);
+    --background: rgba(180, 180, 180, 0.7);
     justify-content: space-between;
   }
 
@@ -96,7 +94,6 @@
   }
 
   ul {
-	border: 1px solid red;
 
     position: relative;
     padding: 0;
@@ -111,10 +108,9 @@
   }
 
   li {
-	border: 1px solid red;
-
+    border: 1px solid darkslategray;
     position: relative;
-	height: 100%;
+    height: 100%;
   }
 
   li.active::before {

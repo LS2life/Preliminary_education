@@ -1,8 +1,10 @@
 <script>
+	import { fade } from 'svelte/transition';
 	import Header from "../../lib/Header.svelte";
 	import Navigations from "../../lib/Navigitions.svelte";
 	import Section from "../../lib/Section.svelte"
 	import Footer from "../../lib/Footer.svelte";
+	import Navigitions from '../../lib/Navigitions.svelte';
 </script>
 <!--
 		Google font:
@@ -35,6 +37,6 @@
 
 <Header />
 <Navigations />
-<slot> <!-- optional fallback --></slot>
+	<slot > <!-- optional fallback --></slot>
 <!--// <Aside /> -->
 <Footer />

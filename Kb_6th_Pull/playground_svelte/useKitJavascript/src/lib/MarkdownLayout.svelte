@@ -1,4 +1,7 @@
 <script>
+	import { transition_in } from "svelte/internal";
+    import { fade } from "svelte/transition";
+
     export let title='';
     export let summary='';
     export let update='';
@@ -10,7 +13,7 @@
     <meta name='description' content={summary} />
 </svelte:head>
 
-<div class='post'>
+<div class='post' in:fade="{{delay:500}}" out:fade>
     <h1>{title}</h1>
     <p><time>{update}</time></p>
     <categorie>{categories}</categorie>

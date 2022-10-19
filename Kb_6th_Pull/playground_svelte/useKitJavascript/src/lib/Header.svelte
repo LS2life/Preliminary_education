@@ -10,14 +10,13 @@
 
 <style>
   header {
-    border: 1px solid orchid;
+    border: 1px solid darkslategray;
     display: flex;
     line-height: 40px;
     text-align: center;
   }
 
   spen {
-    border: 1px solid red;
     width: 100%;
   }
 
@@ -27,8 +26,7 @@
     line-height: 1.1;
   }
   h2 {
-    border: 1px solid yellow;
-
+    border: 1px solid darkcyan;
     font-family: "Stylish", sans-serif;
     font-size: 3.5vmin;
     place-items: center;
