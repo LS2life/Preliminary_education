@@ -1,0 +1,97 @@
+2022-10-19 21:50:21,684 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-10-19 21:50:58,957 [Worker-7: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.practice.webbe:calcli:1.0-SNAPSHOT @ /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/calcli/pom.xml.
+2022-10-19 21:50:58,957 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.practice.webbe:calcli:1.0-SNAPSHOT @ /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/calcli/pom.xml.
+2022-10-19 21:50:59,349 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:50:59,350 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/calcli/src/main/resources
+2022-10-19 21:50:59,353 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:50:59,354 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/calcli/src/test/resources
+2022-10-19 21:50:59,573 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:50:59,573 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/calcli/src/main/resources
+2022-10-19 21:50:59,575 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:50:59,575 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/calcli/src/test/resources
+2022-10-19 21:51:00,140 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.practice:diexam01:0.0.1-SNAPSHOT @ /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/diexam01/pom.xml.
+2022-10-19 21:51:00,504 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:51:00,504 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-10-19 21:51:00,506 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-10-19 21:51:00,513 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-10-19 21:51:00,516 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:51:00,516 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-10-19 21:51:00,516 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/diexam01/src/test/resources
+2022-10-19 21:51:00,778 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.esanfield:playground:0.0.1-SNAPSHOT @ /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/playground_back/pom.xml.
+2022-10-19 21:51:01,131 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:51:01,131 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-10-19 21:51:01,131 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-10-19 21:51:01,138 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-10-19 21:51:01,141 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:51:01,141 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-10-19 21:51:01,141 [Worker-7: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/playground_back/src/test/resources
+2022-10-19 21:51:01,537 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.practice.webbe:calcli:1.0-SNAPSHOT @ /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/calcli/pom.xml.
+2022-10-19 21:51:02,250 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:51:02,250 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/calcli/src/main/resources
+2022-10-19 21:51:02,253 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:51:02,253 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/calcli/src/test/resources
+2022-10-19 21:51:02,361 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:51:02,362 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-10-19 21:51:02,363 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-10-19 21:51:02,364 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-10-19 21:51:02,367 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:51:02,367 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-10-19 21:51:02,367 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/diexam01/src/test/resources
+2022-10-19 21:51:02,434 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:51:02,434 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-10-19 21:51:02,435 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-10-19 21:51:02,436 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-10-19 21:51:02,439 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:51:02,439 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-10-19 21:51:02,439 [Worker-6: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/playground_back/src/test/resources
+2022-10-19 21:51:03,511 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/release/antlr/antlr/2.7.7/antlr-2.7.7-javadoc.jar
+2022-10-19 21:51:03,514 [Worker-7: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for antlr:antlr:2.7.7
+org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:jar:javadoc:2.7.7
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$6(MavenImpl.java:608)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:350)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:219)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:205)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:577)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:562)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:350)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:262)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:205)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:270)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2022-10-19 21:51:04,421 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/release/org/springframework/cloud/spring-cloud-starter-openfeign/3.1.3/spring-cloud-starter-openfeign-3.1.3-javadoc.jar
+2022-10-19 21:51:05,508 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-openfeign/3.1.3/spring-cloud-starter-openfeign-3.1.3-javadoc.jar
+2022-10-19 21:51:05,509 [Worker-7: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for org.springframework.cloud:spring-cloud-starter-openfeign:3.1.3
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springframework.cloud:spring-cloud-starter-openfeign:jar:javadoc:3.1.3
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$6(MavenImpl.java:608)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:350)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:219)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:205)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:577)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:562)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:350)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:262)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:205)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:270)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2022-10-19 21:51:06,500 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/release/org/springframework/cloud/spring-cloud-starter/3.1.3/spring-cloud-starter-3.1.3-javadoc.jar
+2022-10-19 21:51:06,729 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/release/org/springframework/cloud/spring-cloud-starter/3.1.3/spring-cloud-starter-3.1.3-javadoc.jar
+2022-10-19 21:51:06,730 [Worker-7: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework.cloud:spring-cloud-starter:3.1.3
+2022-10-19 21:51:06,925 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:51:06,925 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-10-19 21:51:06,925 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-19 21:51:06,925 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-19 21:51:06,927 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-19 21:51:06,927 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-10-19 21:51:06,927 [Worker-4: 작업공간 빌드 중] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lss/Documents/code/Preliminary_education/Kb_6th_Pull/playground_spring_boot/playground_back/src/test/resources
