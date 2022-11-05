@@ -1,4 +1,4 @@
-package com.example.blog.controller;
+package io.github.kellogg.controller;
 
 import java.util.Map;
 
@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.blog.dto.MemberDTO;
+import io.github.kellogg.dto.MemberDTO;
+
 
 @RestController
 @RequestMapping("/blog")
@@ -21,7 +22,7 @@ public class GetController {
     }
 
     // http://localhost:8080/blog/name
-    @GetMapping(value = "/name")
+    @RequestMapping(value = "/name")
     public String getName() {
         return "MyName";
     }
