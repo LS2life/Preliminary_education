@@ -6,10 +6,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import io.github.kellogg.data.dao.ProductDAO;
 import io.github.kellogg.data.entity.ProductEntity;
+import io.github.kellogg.data.handler.ProductDataHandler;
 
 @Service
 @Transactional
-public class ProductDataHandlerImpl {
+public class ProductDataHandlerImpl implements ProductDataHandler{
 
     ProductDAO productDAO;
 

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.github.kellogg.data.dto.ProductDto;
+import io.github.kellogg.service.ProductService;
 
 @RestController
 @RequestMapping("/blog")
