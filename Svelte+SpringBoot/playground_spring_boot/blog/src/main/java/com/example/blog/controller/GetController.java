@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.blog.dto.MemberDTO;
 
 @RestController
-@RequestMapping("/blog")
+@RequestMapping("/api/v1/get-api")
 public class GetController {
     
     // http://localhost:8080/blog/hello

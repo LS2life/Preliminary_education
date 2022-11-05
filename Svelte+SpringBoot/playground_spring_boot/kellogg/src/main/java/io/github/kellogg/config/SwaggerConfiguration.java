@@ -9,10 +9,8 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
-@EnableSwagger2
 public class SwaggerConfiguration {
     
     @Bean
@@ -23,7 +21,7 @@ public class SwaggerConfiguration {
         .apiInfo(apiInfo())
         .select()
         // api 스펙이 작성되어 있는 패키지 (controller)를 지정.
-        .apis(RequestHandlerSelectors.basePackage("io.github.killogg"))
+        .apis(RequestHandlerSelectors.basePackage("io.github.kellogg"))
         // apis 에 있는 api 중 특정 path를 선택
         .paths(PathSelectors.any())
         .build();

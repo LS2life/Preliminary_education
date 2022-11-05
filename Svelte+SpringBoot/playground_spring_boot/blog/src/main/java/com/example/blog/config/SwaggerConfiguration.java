@@ -17,7 +17,6 @@ public class SwaggerConfiguration {
     // Docket : Swagger설정의 핵심이 되는 bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
-        .useDefaultResponseMessages(false)
         // swagger ui로 노출할 정보
         .apiInfo(apiInfo())
         .select()
