@@ -13,7 +13,7 @@ import io.github.kellogg.dto.MemberDTO;
 
 
 @RestController
-@RequestMapping("/api/v1/get-api")
+@RequestMapping("/kellogg")
 public class GetController {
     
     // http://localhost:8080/blog/hello

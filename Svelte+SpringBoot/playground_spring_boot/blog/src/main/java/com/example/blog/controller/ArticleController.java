@@ -5,9 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.blog.Repository.ArticleRepository;
 import com.example.blog.dto.ArticleForm;
 import com.example.blog.entity.Article;
+import com.example.blog.repository.ArticleRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
