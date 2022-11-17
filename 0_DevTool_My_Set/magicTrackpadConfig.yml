@@ -1,0 +1,107 @@
+# Ubuntu 22.04
+# Magic Trackpad 사용
+# - input 그룹 맴버로 등록
+#   $ sudo gpasswd -a $USER input
+#   $ newgrp input
+
+# - 재부팅
+
+# - 패키지 설치
+#    - libinput-tool설치
+#      $ sudo apt install libinput-tool
+
+#    - Ruby 설치
+#      $ sudo apt install ruby
+
+#    - Fusuma 설치
+#      $ sudo gem install fusuma
+
+#    - xdotool 설치
+#      $ sudp apt install xdotool
+
+# - config file 등록
+#   $ mkdir -p ~/.config/fusuma
+#   $ vi ~/.config/fusuma/config.yml
+
+# - Fusuma 실행 테스트
+#   $ fusuma
+
+# - 제스쳐 맵핑
+
+# - 시작프로그램 등록
+#    - fusuma위치확인
+#      $ which fusuma
+
+#    - 자동실행 등록
+#       $ gnome-session-properties
+
+#    Add Startup Program (-d는 데몬실행옵션)
+#    - Name: fusuma
+#      Command: /usr/local/bin/fusuma -d
+#      Comment: fusuma
+
+# 만약 command: 프로퍼티가 비어있으면, swipe나 pinch는  무효.
+# threshold: swipe나 pinch의 민감도. Default 값은 1.
+# interval: wsipe와 pinch 사이의 딜레이. Default 1.
+
+# 사용가능한 제스쳐
+
+# swipe 살짝훑기
+# - 손가락 2개, 3개 사용가능.
+# - 손가락 2개(2:), 3개(3:) 사용가능.
+# - 상(up:), 하(down:), 좌(left:), 우(right:) 방향 가능.
+# - 시작(begin:), 행동(update:), 종료(end:) 이벤트 사용가능.
+
+# pinch 벌리기 오므리기
+# - 손가락 2개(2:), 3개(3:), 4개(4:) 사용가능.
+# - 벌리기 동작(in:), 오므리기(out:) 동작 사용.
+# - 시작(begin:), 행동(update:), 종료(end:) 이벤트 사용가능.
+
+# rotate 돌리기
+# - 손가락 2개(2:), 3개(3:), 4개(4:) 사용가능.
+# - 시계방향(clockwise:), 반시계방향(counterclockwise:) 사용가능.
+# - 시작(begin:), 행동(update:), 종료(end:) 이벤트 사용가능.
+
+# hold 잡기
+# - 손가락 1개(1:), 2개(2:), 3개(3:), 4개(4:) 사용가능.
+# - 시작(begin:), 종료(end:), 취소(cancelled:) 이벤트 사용가능.
+
+swipe:
+  3:
+    left:
+      command: "xdotool key alt+Right" # History forward
+    right:
+      command: "xdotool key alt+Left" # History back
+    begin:
+      command: xdotool mousedown 1 # Activity
+    update:
+      command: xdotool musemove_relative -- $move_x, $move_y # Activity
+      interval: 0.01
+      accel: 2
+    end:
+      dommand: xdotool mouseup 1
+  4:
+    up:
+      command: "xdotool key super" # Switch to next workspace
+    down:
+      command: "xdotool key super" # Switch to previous workspace
+    left:
+      command: "xdotool key super+0xff55" # Switch to next workspace
+    right:
+      command: "xdotool key super+0xff56" # Switch to previous workspace
+pinch:
+    2:
+      in:
+        command: "xdotool keydown ctrl click 4 keyup ctrl" # Zoom in
+      out:
+        command: "xdotool keydown ctrl click 5 keyup ctrl" # Zoom out
+
+threshold:
+  swipe: 0.5
+  pinch: 0.3
+
+interval:
+  swipe: 0.5
+  pinch: 0.5
+
+

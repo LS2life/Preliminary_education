@@ -5,10 +5,12 @@ public class test{
         return my_string.replace(letter,""); 
     }
 
-    // 문자 반복 출력하기
-    public String solution(String my_string, int n) {
-        String answer = my_string * n;
-        return answer;
+    // 배열 두배 만들기
+    public int[] solution(int[] numbers) {
+        // int[] answer = numbers*2;
+        // return answer;
+        System.out.println();
+
     }
     public static void main(String[] args) {
         
@@ -20,6 +22,8 @@ public class test{
         // String my_string = "hello";
         // int letter = 3;
         // solution(my_string, n);
+
+        int[] numbers = {1,2,3,4,5};
     }
 
 }
