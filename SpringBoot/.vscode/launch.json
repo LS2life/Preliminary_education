@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch JumpToSpringBootApplication",
+            "request": "launch",
+            "mainClass": "com.wiki.JumpToSpringBoot.JumpToSpringBootApplication",
+            "projectName": "JumpToSpringBoot"
+        },
+        {
+            "type": "java",
             "name": "Launch BlogApplication",
             "request": "launch",
             "mainClass": "com.example.blog.BlogApplication",
