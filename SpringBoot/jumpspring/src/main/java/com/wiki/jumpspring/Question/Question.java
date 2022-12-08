@@ -9,11 +9,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import org.springframework.data.annotation.CreatedDate;
 
 import com.wiki.jumpspring.Answer.Answer;
+import com.wiki.jumpspring.user.SiteUser;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -48,5 +50,9 @@ public class Question {
     // CascadeType.REMOVE는 질문을 삭제하면 그에달린 답변들도 모두 삭제하기위한 속성.
 	@OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
 	private List<Answer> answerList;
+
+	// 여러개의 질문이 한명의 사용자에게 작성될수... 있나?
+	@ManyToOne
+	private SiteUser author;
 
 }

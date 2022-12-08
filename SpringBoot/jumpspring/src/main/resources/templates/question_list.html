@@ -9,17 +9,49 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="question, loop : ${questionList}">
-                <!-- 테이블항목 번호 -->
-                <td th:text="${loop.count}"></td>
+            <tr th:each="question, loop : ${paging}">
+                <!-- 전체 게시물 개수 - (현재 페이지 번호 * 페이지당 게시물 개수) - 나열 인덱스(0부터 시작) -->
+                <td th:text="${paging.getTotalElements - (paging.number * paging.size) - loop.index}"></td>
+                <!-- 게시물 번호 -->
+                <!-- <td th:text="${loop.count}"></td> -->
                 <td>
                     <a th:href="@{|/question/detail/${question.id}|}" th:text="${question.subject}"></a>
+                    <span class="text-danger small ms-2" 
+                        th:if="${#lists.size(question.answerList)>0}"
+                        th:text="${#lists.size(question.answerList)}">
+                    </span>
                 </td>
                 <!-- 날짜 출력 -->
                 <td th:text="${#temporals.format(question.createDate,'yyyy-MM-dd HH:mm')}"></td>
             </tr>
         </tbody>
     </table>
+    <!-- 페이징 처리 시작 -->
+    <div th:if="${!paging.isEmpty()}">
+        <ul class="pagination justify-content-center">
+            <!-- th:classappend='조건식 ? 클래스값' 은 조건식이 참인 경우 클래스값을 class 속성에 추가한다.-->
+            <!-- 이전 페이지가 없으면 비활성화 -->
+            <li class="page-item" th:classappend="${!paging.hasPrevious}?'disabled'">
+                <!-- 이전 페이지 링크 -->
+                <a class="pag-link" th:href="@{|?page=${paging.number-1}|}">
+                    <span>이전</span>
+                </a>
+            </li>
+            <!-- 페이지 리스트 루프. 현제 페이지와 같으면 active 적용 -->
+            <li th:each="page: ${#numbers.sequence(0, paging.totalPages-1)}"
+                th:if="${page >= paging.number-5 and page <= paging.number+5}"
+                th:classappend="${page == paging.number} ? 'active'" class="page-item">
+                <a th:text="${page}" class="page-link" th:href="@{|?page=${page}|}"></a>
+            </li>
+            <!-- 다음 페이지가 없으면 비활성화 -->
+            <li class="page-item" th:classappend="${!paging.hasNext} ? 'disabled'">
+                <!-- 다음 페이지 링크 -->
+                <a class="page-link" th:href="@{|?page=${paging.number+1}|}">
+                    <span>다음</span>
+                </a>
+            </li>
+        </ul>
+    </div>
     <a th:href="@{/question/create}" class="btn btn-primary">질문 등록하기</a>
 
 </div>
