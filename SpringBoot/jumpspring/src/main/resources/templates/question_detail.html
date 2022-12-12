@@ -8,8 +8,13 @@
 	<h2 class="border-bottom py-2" th:text="${question.subject}"></h2>
 	<div class="card my-3">
 		<div class="card-body">
-			<div class="card-text" style="white-space: pre-line;" th:text="${question.content}"></div>
+			<!-- <div class="card-text" style="white-space: pre-line;" th:text="${question.content}"></div> -->
+			<div class="card-text" th:utext="${@commonUtil.markdown(question.content)}" ></div>
 			<div class="d-flex justify-content-end">
+				<div th:if="${question.modifyDate != null}" class="badge bg-light text-dark p-2 text-start mx-3">
+					<div class="mb-2">modified at</div>
+					<div th:text="${#temporals.format(question.modifyDate, 'yyyy-MM-dd HH:mm')}"></div>
+				</div>
 				<div class="badge bg-light text-dark p-2 text-start">
 					<div class="mb-2">
 						<span th:if="${question.author != null}" th:text="${question.author.username}"></span>
@@ -17,7 +22,12 @@
 					<div th:text="${#temporals.format(question.createDate, 'yyyy-MM-dd HH:mm')}"></div>
 				</div>
 			</div>
-			<div>
+			<div class="my-3">
+				<a href="javascript:void(0);" class="recommend btn btn-sm btn-outline-secondary"
+                th:data-uri="@{|/question/vote/${question.id}|}">
+                추천
+					<span class="badge rounded-pill bg-success" th:text="${#lists.size(question.voter)}"></span>
+				</a>
 				<!-- 삭제 버튼은 수정 버튼과 다르게 href 속성값을 javascript:void(0)로 설정하고 삭제를 실행할 url을 얻기위해 th:data-uri(자바스크립트에서 클릭 이벤트 발생시 this.dataset.uri와 같이 사용하여 그 값을 얻을 수 있다.) 속성을 추가.  -->
 				<a th:href="@{|/question/modify/${question.id}|}" class="btn btn-sm btn-outline-secondary" sec:authorize="isAuthenticated()" th:if="${question.author != null and #authentication.getPrincipal().getUsername() == question.author.username}" th:text="수정"></a>
 				<a href="javascript:boid(0);" th:data-uri="@{|/question/delete/${question.id}|}" class="delete btn btn-sm btn-outline-secondary" sec:authorize="isAuthenticated()" th:if="${question.author != null and #authentication.getPrincipal().getUsername() == question.author.username}" th:text="삭제"></a>
@@ -29,12 +39,30 @@
 		th:text="|${#lists.size(question.answerList)}개의 답변이 있습니다.|"></h5>
 	<!-- 답변 반복 시작 -->
 	<div class="card my-3" th:each="answer : ${question.answerList}">
+		<a th:id="|answer_${answer.id}|"></a>
 		<div class="card-body">
-			<div class="card-text" style="white-space: pre-line;" th:text="${answer.content}"></div>
+			<!-- <div class="card-text" style="white-space: pre-line;" th:text="${answer.content}"></div> -->
+			<div class="card-text" th:utext="${@commonUtil.markdown(answer.content)}"></div>
 			<div class="d-flex justify-content-end">
+				<div th:if="${answer.modifyDate != null}" class="badge bg-light text-dark p-2 text-start mx-3">
+					<div class="mb-2">modified at</div>
+					<div th:text="${#temporals.format(answer.modifyDate, 'yyyy-MM-dd HH:mm')}"></div>
+				</div>
 				<div class="badge bg-light text-dark p-2 text-start">
+					<div class="mb-2">
+						<span th:if="${answer.author != null}" th:text="${answer.author.username}"></span>
+					</div>
 					<div th:text="${#temporals.format(answer.createDate, 'yyyy-MM-dd HH:mm')}"></div>
 				</div>
+			</div>
+			<!-- 답변 수정 삭제 -->
+			<div class="my-3">
+				<a href="javascript:void(0);" class="recommend btn btn-sm btn-outline-secondary" th:data-uri="@{|/answer/vote/${answer.id}|}">
+					추천
+					<span class="badge rounded-pill bg-success" th:text="${#lists.size(answer.voter)}"></span>
+				</a>
+				<a href="@{|/answer/modify/${answer.id}|}" class="btn btn-sm btn-outline-secondary" sec:authorize="isAuthenticated()" th:if="${answer.author != null and #authentication.getPrincipal().getUsername() == answer.author.username}" th:text="수정"></a>
+				<a href="javascript:void(0);" th:data-uri="@{|/answer/delete/${answer.id}|}" class="delete btn btn-sm btn-outline-secondary" sec:authorize="isAuthenticated()" th:if="${answer.author != null and #authentication.getPrincipal().getUsername() == answer.author.username}" th:text="삭제"></a>
 			</div>
 		</div>
 	</div>
@@ -55,6 +83,25 @@
 		<input type="submit" value="답변등록" class="btn btn-primary my-2">
 	</form>
 </div>
+<script layout:fragment="script" type='text/javascript'>
+const delete_elements = document.getElementsByClassName("delete");
+Array.from(delete_elements).forEach(function(element) {
+    element.addEventListener('click', function() {
+        if(confirm("정말로 삭제하시겠습니까?")) {
+            location.href = this.dataset.uri;
+        };
+    });
+});
+
+const recommend_elements = document.getElementsByClassName("recommend");
+Array.from(recommend_elements).forEach(function(element) {
+	element.addEventListener('click', function() {
+		if(confirm("정말 추천하시겠습니까?")) {
+			location.href = this.dataset.uri;
+		};
+	});
+});
+</script>
 </html>
 
 <!--

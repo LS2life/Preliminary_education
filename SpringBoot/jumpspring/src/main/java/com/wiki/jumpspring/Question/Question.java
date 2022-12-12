@@ -2,6 +2,7 @@ package com.wiki.jumpspring.Question;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -58,4 +60,7 @@ public class Question {
 	// 수정 일시
 	private LocalDateTime modifyDate;
 
+	// 추천인
+	@ManyToMany
+	Set<SiteUser> voter;
 }
