@@ -21,13 +21,22 @@ import com.wiki.jumpspring.Answer.AnswerForm;
 import com.wiki.jumpspring.user.SiteUser;
 import com.wiki.jumpspring.user.UserService;
 
-import groovyjarjarantlr4.v4.parse.ANTLRParser.throwsSpec_return;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 // 의존성 주입(Dependency Injection) 방식 3가지
 // 생성자 - 생성자를 작성하여 객체를 주입하는 방식(권장)
 // Setter - Setter 메소드를 작성하여 @Autowired로 객체를 주입하는 방식.
 
+// log객체를 사용하여 debug,error 등의 로그를 출력할 수 있다.
+// trace (1단계) - debug 보다 훨씬 상세한 정보를 나타낼 경우에 사용
+// debug (2단계) - 디버깅 목적으로 사용
+// info  (3단계) - 일반 정보를 출력할 목적으로 사용
+// warn  (4단계) - 경고 정보를 출력할 목적으로(작은 문제) 사용
+// error (5단계) - 오류 정보를 출력할 목적으로(큰 문제) 사용
+// fatal (6단계) - 아주 심각한 문제를 출력할 목적으로 사용
+
+@Slf4j
 // URL 접두사(prefix)가 동일한부분은 선맵핑으로 처리 할 수 있다.ㅇ
 @RequestMapping("/question")
 // 롬복이 제공하는 어노테이션으로 final이 붙은 속성을 포함하여 생성자를 자동으로 생성하는 역할을 한다.
@@ -45,6 +54,8 @@ public class QuestionController {
 	// 컨트롤러 메서드의 매개변수로 지정하기만 하면 스프링부트가 자동으로 Model 객체를 생성한다.
 	// public String list(Model model,@RequestParam(value="page", defaultValue="0")int page) {
     public String list(Model model, @RequestParam(value = "page", defaultValue = "0") int page, @RequestParam(value = "kw", defaultValue = "") String kw) {
+		// Slf4j 로그 출력
+		log.info("page:{}, kw:{}", page, kw);
 		// Page<Question> paging = this.questionService.getList(page);
         Page<Question> paging = this.questionService.getList(page, kw);
 		model.addAttribute("paging", paging);
