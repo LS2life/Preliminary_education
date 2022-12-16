@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.wiki.jumpspring.Question.QuestionService;
+import com.wiki.jumpspring.user.SiteUser;
 
 // import com.wiki.jumpspring.Question.QuestionRepository;
 
@@ -34,9 +35,10 @@ class JumpspringApplicationTests {
         // this.questionRepository.save(q2);  // 두번째 질문 저장
 
 		// for(int i=1; i<=300; i++) {
-			// String subject = String.format("테스트 데이터입니다:[%03d]",i);
-			// String content = "내용 없음";
-			// this.questionService.create(subject,content);
+		// 	String subject = String.format("테스트 데이터입니다:[%03d]",i);
+		// 	String content = "내용 없음";
+		// 	String user = String.format("king[%03d]",i);
+		// 	this.questionService.create(subject,content,user);
 		// }
 	}
 
