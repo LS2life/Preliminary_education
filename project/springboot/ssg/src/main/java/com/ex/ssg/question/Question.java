@@ -2,6 +2,7 @@ package com.ex.ssg.question;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,9 +10,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import com.ex.ssg.answer.Answer;
+import com.ex.ssg.user.SiteUser;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -23,7 +27,7 @@ import lombok.Setter;
 @Entity
 public class Question {
     
-   @Id
+    @Id
     // 데이터를 저장할 때 해당속성에 값을 따로 세팅하지 않아도 1씩 자동으로 증가하여 저장된다.
     // strategy는 고유번호를 생성하는 옵션. 생략시 지정된 칼럼들이 모두 동일한 시퀀스로 번호를 생성하기 때문에 일정한 순서의 고유번호를 가질 수 없게 된다.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -45,4 +49,15 @@ public class Question {
     // CascadeType.REMOVE는 질문을 삭제하면 그에달린 답변들도 모두 삭제하기위한 속성.
     @OneToMany(mappedBy="question", cascade = CascadeType.REMOVE)
     private List<Answer> answerList;
+
+	// 여러개의 질문이 한명의 사용자에게 작성될수... 있나?
+    @ManyToOne
+    private SiteUser author;
+
+    // 수정 일시
+    private LocalDateTime modifyDate;
+
+    // 추천인
+    @ManyToMany
+    Set<SiteUser> voter;
 }

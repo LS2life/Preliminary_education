@@ -23,6 +23,7 @@ public class SiteUser {
 
     private String password;
 
+    // 유일한 값만 저장할 수 있다.
     @Column(unique = true)
     private String email;
 }

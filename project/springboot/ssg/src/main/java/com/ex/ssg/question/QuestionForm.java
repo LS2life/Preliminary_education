@@ -10,7 +10,9 @@ import lombok.Setter;
 @Setter
 public class QuestionForm {
 
+    // 빈 문자열을 허용하지 않음
     @NotEmpty(message = "제목을 입력해주세요.")
+    // 입력 최대 길이. 200바이트를 넘을 수 없다.
     @Size(max=200)
     private String subject;
 
