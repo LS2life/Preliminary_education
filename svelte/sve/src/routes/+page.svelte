@@ -1,10 +1,9 @@
 <script>
-	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 	export let data;
 	// console.log(data);
-	const { products, users, board } = data;
+	const { products, users } = data;
 	
 </script>
 
@@ -24,14 +23,11 @@
 	</h1>
 		<!-- <h2>{board.subject}</h2> -->
 	<!-- <Counter /> -->
-	{#each products as products }
-		<h2>{products.title}</h2>
-		<p>{products.brand}</p>
-		<p>{products.description}</p>
-	{/each}
-	{#each users as users}
-		<p>{users.email}</p>
 
+	{#each products as product }
+		<h2>{product.title}</h2>
+		<p>{product.brand}</p>
+		<p>{product.description}</p>
 	{/each}
 </section>
 
