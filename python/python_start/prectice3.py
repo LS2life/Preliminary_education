@@ -25,6 +25,7 @@
 # for waiting_no in [0, 1, 2, 3, 4]:
 #     print("대기번호 : {0}".format(waiting_no))
 # * randrange()
+print(" -- for문 예시 -- ")
 for waiting_no in range(1, 6):
     print("대기번호 : {0}".format(waiting_no))
 
@@ -34,7 +35,29 @@ for customer in starbucks:
 
 
 
+# ! 한줄 for문
+#  출석번호가 1 2 3 4 , 앞에 100을 붙이기로 함 -> 101, 102, 103, 104.
+print(" -- 한 줄 for 문 예시 --")
+print("  < 더하기 100 >")
+students = [1,2,3,4,5]
+print(students)
+students = [i+100 for i in students]
+print(students)
+
+# 학생 이름을 길이로 변환
+print("  < 학생 이름을 길이로 변환 >")
+students = ["Iron man", "Thor", "I ma groot"] 
+students = [len(i) for i in students]
+print(students)
+
+# 학생 이름을 대문자로 변환
+print("  < 학생이름을 대문자로 변환 >")
+students = ["Iron man", "Thor", "I ma groot"] 
+students = [i.upper() for i in students]
+print(students)
+
 # ! while문
+print(" -- while문 예시 -- ")
 customer = "토르"
 index = 5
 while index >= 1:
@@ -53,6 +76,7 @@ person = "Unknown"
 
 
 # ! continue 와 break
+print(" -- continue 와 break -- ")
 # 결석
 absent = [2, 5]
 # 책이 없어
